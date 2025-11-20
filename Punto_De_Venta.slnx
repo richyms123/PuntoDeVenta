@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="CapaDatos/CapaDatos.csproj" />
-  <Project Path="Punto_De_Venta/CapaPresentacion.csproj" />
+  <Project Path="Punto_De_Venta/CapaPresentacion.csproj" Id="c23db0ff-c8f1-42e0-a57c-0168b5df2de0" />
 </Solution>
