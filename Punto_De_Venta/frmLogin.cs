@@ -41,5 +41,22 @@ namespace Punto_De_Venta
         {
             Application.Exit();
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            //Lógica para validaciones e inicio de sesión
+
+
+            //Si todo esta bien lo deja entrar
+            using (var menu = new frmMenu())
+            {
+                if (menu.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show(); // Si el menú se cierra con OK, vuelve a mostrar el login
+                    txtContrasena.Text = string.Empty; // Limpia la contraseña
+                    txtUsuario.Text = string.Empty; // Limpia el usuario
+                }
+            }
+        }
     }
 }
