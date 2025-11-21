@@ -12,24 +12,30 @@ namespace Punto_De_Venta
 {
     public partial class frmMenu : Form
     {
+        private Form ActiveForm = null;
         public frmMenu()
         {
             InitializeComponent();
         }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
+        public void AbrirForm(Form ChildForm)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnMaximizar.Visible = true;
+            if (ActiveForm != null)
+            {
+                ActiveForm.Close();
+            }
+            ActiveForm = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(ChildForm);
+            pnlContenedor.Tag = ChildForm;
+            ChildForm.BringToFront();
+
+            ChildForm.Show();
         }
 
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnMaximizar.Visible = false;
-            btnRestaurar.Visible = true;
-        }
+        
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -45,6 +51,11 @@ namespace Punto_De_Venta
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmVentas());
         }
     }
 }
