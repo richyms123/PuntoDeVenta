@@ -49,14 +49,23 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -88,6 +97,18 @@
     <Compile Include="ControlesUsuario\ctlProducto.Designer.cs">
       <DependentUpon>ctlProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesUsuario\ctlProductoInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlProductoInventario.Designer.cs">
+      <DependentUpon>ctlProductoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlTituloProductoInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlTituloProductoInventario.Designer.cs">
+      <DependentUpon>ctlTituloProductoInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesUsuario\ctlTicketProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +120,12 @@
     </Compile>
     <Compile Include="ControlesUsuario\ctlTituloProductos.Designer.cs">
       <DependentUpon>ctlTituloProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -123,11 +150,20 @@
     <EmbeddedResource Include="ControlesUsuario\ctlProducto.resx">
       <DependentUpon>ctlProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ctlProductoInventario.resx">
+      <DependentUpon>ctlProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ctlTituloProductoInventario.resx">
+      <DependentUpon>ctlTituloProductoInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlTicketProducto.resx">
       <DependentUpon>ctlTicketProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlTituloProductos.resx">
       <DependentUpon>ctlTituloProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

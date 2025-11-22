@@ -178,6 +178,7 @@
             this.btnInvetario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInvetario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInvetario.UseVisualStyleBackColor = true;
+            this.btnInvetario.Click += new System.EventHandler(this.btnInvetario_Click);
             // 
             // btnVentas
             // 
@@ -275,7 +276,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -324,8 +325,8 @@
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1428, 748);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.panel1);

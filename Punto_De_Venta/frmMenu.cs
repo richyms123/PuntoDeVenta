@@ -57,5 +57,10 @@ namespace Punto_De_Venta
         {
             AbrirForm(new frmVentas());
         }
+
+        private void btnInvetario_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmInventario());
+        }
     }
 }
