@@ -12,7 +12,7 @@ namespace Punto_De_Venta.ControlesUsuario
 {
     public partial class ctlProducto : UserControl
     {
-        private Color colorSinFoco = Color.Transparent;
+        private Color colorSinFoco = Color.Silver;
         // Color cuando el mouse está encima (Naranja)
         private Color colorConFoco = Color.FromArgb(216, 67, 21);
         public ctlProducto()
