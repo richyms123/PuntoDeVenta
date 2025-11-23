@@ -89,6 +89,7 @@
             this.btnAuditoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAuditoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAuditoria.UseVisualStyleBackColor = true;
+            this.btnAuditoria.Click += new System.EventHandler(this.btnAuditoria_Click);
             // 
             // btnReportes
             // 

@@ -85,7 +85,7 @@
             this.bunifuPanel1.Location = new System.Drawing.Point(27, 29);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1100, 726);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1100, 652);
             this.bunifuPanel1.TabIndex = 4;
             // 
             // pnlContenedor
@@ -102,7 +102,7 @@
             this.pnlContenedor.Controls.Add(this.ctlTituloReporte1);
             this.pnlContenedor.Location = new System.Drawing.Point(18, 229);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1055, 494);
+            this.pnlContenedor.Size = new System.Drawing.Size(1055, 420);
             this.pnlContenedor.TabIndex = 10;
             // 
             // panel2

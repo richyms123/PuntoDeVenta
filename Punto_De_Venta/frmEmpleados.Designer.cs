@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpleados));
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.materialPictureBox2 = new FontAwesome.Sharp.Material.MaterialPictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.pnlContenedor = new System.Windows.Forms.FlowLayoutPanel();
             this.btnNuevoEmpleado = new FontAwesome.Sharp.Material.MaterialButton();
+            this.pnlContenedor = new System.Windows.Forms.FlowLayoutPanel();
             this.ctlEmpleado4 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
             this.ctlEmpleado5 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
             this.ctlEmpleado6 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
             this.ctlEmpleado7 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
             this.ctlEmpleado8 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
             this.ctlEmpleado9 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
+            this.materialPictureBox2 = new FontAwesome.Sharp.Material.MaterialPictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,46 +79,6 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1100, 675);
             this.bunifuPanel1.TabIndex = 3;
             // 
-            // materialPictureBox2
-            // 
-            this.materialPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.materialPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.materialPictureBox2.IconChar = FontAwesome.Sharp.MaterialIcons.AccountGroup;
-            this.materialPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.materialPictureBox2.IconSize = 55;
-            this.materialPictureBox2.Location = new System.Drawing.Point(18, 15);
-            this.materialPictureBox2.Name = "materialPictureBox2";
-            this.materialPictureBox2.Size = new System.Drawing.Size(55, 55);
-            this.materialPictureBox2.TabIndex = 6;
-            this.materialPictureBox2.TabStop = false;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.lblUsuario.Location = new System.Drawing.Point(73, 20);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(343, 41);
-            this.lblUsuario.TabIndex = 3;
-            this.lblUsuario.Text = "Gestión de empleados";
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.AutoScroll = true;
-            this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado4);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado5);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado6);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado7);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado8);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado9);
-            this.pnlContenedor.Location = new System.Drawing.Point(18, 93);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1063, 560);
-            this.pnlContenedor.TabIndex = 7;
-            // 
             // btnNuevoEmpleado
             // 
             this.btnNuevoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
@@ -136,6 +98,21 @@
             this.btnNuevoEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
             this.btnNuevoEmpleado.Click += new System.EventHandler(this.btnNuevoEmpleado_Click);
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.AutoScroll = true;
+            this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.ctlEmpleado4);
+            this.pnlContenedor.Controls.Add(this.ctlEmpleado5);
+            this.pnlContenedor.Controls.Add(this.ctlEmpleado6);
+            this.pnlContenedor.Controls.Add(this.ctlEmpleado7);
+            this.pnlContenedor.Controls.Add(this.ctlEmpleado8);
+            this.pnlContenedor.Controls.Add(this.ctlEmpleado9);
+            this.pnlContenedor.Location = new System.Drawing.Point(18, 93);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1063, 560);
+            this.pnlContenedor.TabIndex = 7;
             // 
             // ctlEmpleado4
             // 
@@ -191,6 +168,36 @@
             this.ctlEmpleado9.Size = new System.Drawing.Size(506, 140);
             this.ctlEmpleado9.TabIndex = 8;
             // 
+            // materialPictureBox2
+            // 
+            this.materialPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.materialPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.materialPictureBox2.IconChar = FontAwesome.Sharp.MaterialIcons.AccountGroup;
+            this.materialPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.materialPictureBox2.IconSize = 55;
+            this.materialPictureBox2.Location = new System.Drawing.Point(18, 15);
+            this.materialPictureBox2.Name = "materialPictureBox2";
+            this.materialPictureBox2.Size = new System.Drawing.Size(55, 55);
+            this.materialPictureBox2.TabIndex = 6;
+            this.materialPictureBox2.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.lblUsuario.Location = new System.Drawing.Point(73, 20);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(343, 41);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "Gestión de empleados";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this.btnNuevoEmpleado;
+            // 
             // frmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -204,8 +211,8 @@
             this.panel1.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,5 +231,6 @@
         private ControlesUsuario.ctlEmpleado ctlEmpleado7;
         private ControlesUsuario.ctlEmpleado ctlEmpleado8;
         private ControlesUsuario.ctlEmpleado ctlEmpleado9;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

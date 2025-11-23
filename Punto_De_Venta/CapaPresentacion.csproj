@@ -97,6 +97,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlesUsuario\ctlAuditoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlAuditoria.Designer.cs">
+      <DependentUpon>ctlAuditoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesUsuario\ctlProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="ControlesUsuario\ctlReporte.Designer.cs">
       <DependentUpon>ctlReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlTituloAuditoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlTituloAuditoria.Designer.cs">
+      <DependentUpon>ctlTituloAuditoria.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlesUsuario\ctlTituloProductoInventario.cs">
       <SubType>UserControl</SubType>
@@ -144,6 +156,12 @@
     </Compile>
     <Compile Include="ControlesUsuario\ctlTituloReporte.Designer.cs">
       <DependentUpon>ctlTituloReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditoria.Designer.cs">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmpleados.cs">
       <SubType>Form</SubType>
@@ -189,6 +207,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlesUsuario\ctlAuditoria.resx">
+      <DependentUpon>ctlAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlProducto.resx">
       <DependentUpon>ctlProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlReporte.resx">
       <DependentUpon>ctlReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ctlTituloAuditoria.resx">
+      <DependentUpon>ctlTituloAuditoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlTituloProductoInventario.resx">
       <DependentUpon>ctlTituloProductoInventario.cs</DependentUpon>
@@ -212,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlTituloReporte.resx">
       <DependentUpon>ctlTituloReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditoria.resx">
+      <DependentUpon>frmAuditoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>

@@ -72,5 +72,10 @@ namespace Punto_De_Venta
         {
             AbrirForm(new frmReportes());
         }
+
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmAuditoria());
+        }
     }
 }
