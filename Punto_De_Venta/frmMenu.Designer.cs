@@ -38,7 +38,7 @@
             this.btnVentas = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnInicio = new FontAwesome.Sharp.Material.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -227,10 +227,11 @@
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblCorreo);
+            this.panel2.Controls.Add(this.lblRol);
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.bunifuPictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -239,27 +240,27 @@
             this.panel2.Size = new System.Drawing.Size(260, 95);
             this.panel2.TabIndex = 0;
             // 
-            // lblCorreo
+            // lblRol
             // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(75, 46);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(62, 23);
-            this.lblCorreo.TabIndex = 2;
-            this.lblCorreo.Text = "Correo";
+            this.lblRol.AutoEllipsis = true;
+            this.lblRol.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(70, 46);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(185, 23);
+            this.lblRol.TabIndex = 2;
+            this.lblRol.Text = "Empleado";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(75, 26);
+            this.lblUsuario.Location = new System.Drawing.Point(70, 25);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(72, 23);
             this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Richyms";
             // 
             // bunifuPictureBox1
             // 
@@ -269,7 +270,7 @@
             this.bunifuPictureBox1.BorderRadius = 28;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(12, 20);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(9, 20);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(57, 57);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -338,6 +339,7 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlMenuLateral.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -351,7 +353,7 @@
         private System.Windows.Forms.Panel pnlMenuLateral;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
-        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblUsuario;
         private FontAwesome.Sharp.Material.MaterialButton btnVentas;
         private FontAwesome.Sharp.Material.MaterialButton btnInicio;
