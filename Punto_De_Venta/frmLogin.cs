@@ -44,17 +44,30 @@ namespace Punto_De_Venta
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            //Lógica para validaciones e inicio de sesión
+            
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                MessageBox.Show("Por favor ingresa tu nombre de usuario.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Focus();
+                return;
+            }
 
+            
+            if (string.IsNullOrWhiteSpace(txtContrasena.Text))
+            {
+                MessageBox.Show("Por favor ingresa tu contraseña.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtContrasena.Focus();
+                return;
+            }
 
             //Si todo esta bien lo deja entrar
             using (var menu = new frmMenu())
             {
                 if (menu.ShowDialog() == DialogResult.OK)
                 {
-                    this.Show(); // Si el menú se cierra con OK, vuelve a mostrar el login
-                    txtContrasena.Text = string.Empty; // Limpia la contraseña
-                    txtUsuario.Text = string.Empty; // Limpia el usuario
+                    this.Show(); 
+                    txtContrasena.Text = string.Empty; 
+                    txtUsuario.Text = string.Empty; 
                 }
             }
         }
