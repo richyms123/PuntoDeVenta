@@ -109,6 +109,12 @@
     <Compile Include="ControlesUsuario\ctlProductoInventario.Designer.cs">
       <DependentUpon>ctlProductoInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesUsuario\ctlReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlReporte.Designer.cs">
+      <DependentUpon>ctlReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesUsuario\ctlTituloProductoInventario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="ControlesUsuario\ctlEmpleado.Designer.cs">
       <DependentUpon>ctlEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlTituloReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlTituloReporte.Designer.cs">
+      <DependentUpon>ctlTituloReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmpleados.cs">
       <SubType>Form</SubType>
@@ -163,6 +175,12 @@
     <Compile Include="frmReEdEmpleados.Designer.cs">
       <DependentUpon>frmReEdEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +195,9 @@
     <EmbeddedResource Include="ControlesUsuario\ctlProductoInventario.resx">
       <DependentUpon>ctlProductoInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ctlReporte.resx">
+      <DependentUpon>ctlReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlTituloProductoInventario.resx">
       <DependentUpon>ctlTituloProductoInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesUsuario\ctlEmpleado.resx">
       <DependentUpon>ctlEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ctlTituloReporte.resx">
+      <DependentUpon>ctlTituloReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
@@ -203,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReEdEmpleados.resx">
       <DependentUpon>frmReEdEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>

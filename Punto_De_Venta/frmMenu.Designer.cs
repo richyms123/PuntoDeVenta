@@ -97,7 +97,7 @@
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 10.9F, System.Drawing.FontStyle.Bold);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.IconChar = FontAwesome.Sharp.MaterialIcons.FileChartOutline;
+            this.btnReportes.IconChar = FontAwesome.Sharp.MaterialIcons.FileChart;
             this.btnReportes.IconColor = System.Drawing.Color.White;
             this.btnReportes.IconSize = 50;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,6 +111,7 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnSalir
             // 
