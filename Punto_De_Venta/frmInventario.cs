@@ -46,33 +46,41 @@ namespace Punto_De_Venta
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(txtNombre.Text.Trim() == "")
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                MessageBox.Show("El nombre del producto es obligatorio.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El nombre del producto es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombre.Focus();
                 return;
             }
-            if(txtPrecio.Text.Trim() == "")
+            if (!decimal.TryParse(txtPrecio.Text, out decimal precio) || precio <= 0)
             {
-                MessageBox.Show("El precio del producto es obligatorio.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El precio debe ser un número mayor a 0.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPrecio.Focus();
+                return;
+            }
+            if (!int.TryParse(txtCantidad.Text, out int stock) || stock < 0)
+            {
+                MessageBox.Show("El stock debe ser un número entero positivo.", "Stock Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidad.Focus();
                 return;
             }
             if (cboCategoria.SelectedIndex == 0)
             {
-                MessageBox.Show("Seleccione una categoría válida.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione una categoría válida.", "Falta Categoría", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboCategoria.DroppedDown = true;
+                return;
             }
 
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // 1. Permitir teclas de control
             if (char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
                 return;
             }
 
-            // 2. Validar que sea dígito o punto
             bool esNumero = char.IsDigit(e.KeyChar);
             bool esPunto = (e.KeyChar == '.');
 
@@ -82,7 +90,6 @@ namespace Punto_De_Venta
                 return;
             }
 
-            // 3. Validar que no haya doble punto
             if (esPunto && txtPrecio.Text.Contains("."))
             {
                 e.Handled = true;

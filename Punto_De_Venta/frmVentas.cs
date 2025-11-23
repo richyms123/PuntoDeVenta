@@ -16,5 +16,10 @@ namespace Punto_De_Venta
         {
             InitializeComponent();
         }
+
+        private void frmVentas_Load(object sender, EventArgs e)
+        {
+            cboMetodoPago.SelectedIndex = 0;
+        }
     }
 }

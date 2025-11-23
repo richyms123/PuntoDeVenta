@@ -156,6 +156,7 @@
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnInvetario
             // 

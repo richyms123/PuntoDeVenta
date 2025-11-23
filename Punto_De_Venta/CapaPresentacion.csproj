@@ -61,11 +61,17 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -121,6 +127,18 @@
     <Compile Include="ControlesUsuario\ctlTituloProductos.Designer.cs">
       <DependentUpon>ctlTituloProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesUsuario\ctlEmpleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\ctlEmpleado.Designer.cs">
+      <DependentUpon>ctlEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +156,12 @@
     </Compile>
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReEdEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReEdEmpleados.Designer.cs">
+      <DependentUpon>frmReEdEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
@@ -162,6 +186,12 @@
     <EmbeddedResource Include="ControlesUsuario\ctlTituloProductos.resx">
       <DependentUpon>ctlTituloProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\ctlEmpleado.resx">
+      <DependentUpon>ctlEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReEdEmpleados.resx">
+      <DependentUpon>frmReEdEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>

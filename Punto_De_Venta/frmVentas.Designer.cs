@@ -59,7 +59,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlContenedor = new System.Windows.Forms.FlowLayoutPanel();
             this.ctlProducto1 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ctlProducto2 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
             this.ctlProducto3 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
             this.ctlProducto4 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
@@ -72,6 +71,7 @@
             this.ctlProducto11 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
             this.ctlProducto12 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
             this.ctlProducto13 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.pnlProductos.SuspendLayout();
@@ -532,20 +532,17 @@
             // ctlProducto1
             // 
             this.ctlProducto1.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto1.Location = new System.Drawing.Point(3, 3);
+            this.ctlProducto1.Location = new System.Drawing.Point(10, 5);
+            this.ctlProducto1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto1.Name = "ctlProducto1";
             this.ctlProducto1.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto1.TabIndex = 0;
             // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 20;
-            this.bunifuElipse2.TargetControl = this.btnCancelar;
-            // 
             // ctlProducto2
             // 
             this.ctlProducto2.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto2.Location = new System.Drawing.Point(189, 3);
+            this.ctlProducto2.Location = new System.Drawing.Point(210, 5);
+            this.ctlProducto2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto2.Name = "ctlProducto2";
             this.ctlProducto2.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto2.TabIndex = 1;
@@ -553,7 +550,8 @@
             // ctlProducto3
             // 
             this.ctlProducto3.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto3.Location = new System.Drawing.Point(375, 3);
+            this.ctlProducto3.Location = new System.Drawing.Point(410, 5);
+            this.ctlProducto3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto3.Name = "ctlProducto3";
             this.ctlProducto3.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto3.TabIndex = 2;
@@ -561,7 +559,8 @@
             // ctlProducto4
             // 
             this.ctlProducto4.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto4.Location = new System.Drawing.Point(3, 189);
+            this.ctlProducto4.Location = new System.Drawing.Point(10, 200);
+            this.ctlProducto4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto4.Name = "ctlProducto4";
             this.ctlProducto4.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto4.TabIndex = 3;
@@ -569,7 +568,8 @@
             // ctlProducto5
             // 
             this.ctlProducto5.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto5.Location = new System.Drawing.Point(189, 189);
+            this.ctlProducto5.Location = new System.Drawing.Point(210, 200);
+            this.ctlProducto5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto5.Name = "ctlProducto5";
             this.ctlProducto5.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto5.TabIndex = 4;
@@ -577,7 +577,8 @@
             // ctlProducto6
             // 
             this.ctlProducto6.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto6.Location = new System.Drawing.Point(375, 189);
+            this.ctlProducto6.Location = new System.Drawing.Point(410, 200);
+            this.ctlProducto6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto6.Name = "ctlProducto6";
             this.ctlProducto6.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto6.TabIndex = 5;
@@ -585,7 +586,8 @@
             // ctlProducto7
             // 
             this.ctlProducto7.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto7.Location = new System.Drawing.Point(3, 375);
+            this.ctlProducto7.Location = new System.Drawing.Point(10, 395);
+            this.ctlProducto7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto7.Name = "ctlProducto7";
             this.ctlProducto7.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto7.TabIndex = 6;
@@ -593,7 +595,8 @@
             // ctlProducto8
             // 
             this.ctlProducto8.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto8.Location = new System.Drawing.Point(189, 375);
+            this.ctlProducto8.Location = new System.Drawing.Point(210, 395);
+            this.ctlProducto8.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto8.Name = "ctlProducto8";
             this.ctlProducto8.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto8.TabIndex = 7;
@@ -601,7 +604,8 @@
             // ctlProducto9
             // 
             this.ctlProducto9.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto9.Location = new System.Drawing.Point(375, 375);
+            this.ctlProducto9.Location = new System.Drawing.Point(410, 395);
+            this.ctlProducto9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto9.Name = "ctlProducto9";
             this.ctlProducto9.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto9.TabIndex = 8;
@@ -609,7 +613,8 @@
             // ctlProducto10
             // 
             this.ctlProducto10.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto10.Location = new System.Drawing.Point(3, 561);
+            this.ctlProducto10.Location = new System.Drawing.Point(10, 590);
+            this.ctlProducto10.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto10.Name = "ctlProducto10";
             this.ctlProducto10.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto10.TabIndex = 9;
@@ -617,7 +622,8 @@
             // ctlProducto11
             // 
             this.ctlProducto11.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto11.Location = new System.Drawing.Point(189, 561);
+            this.ctlProducto11.Location = new System.Drawing.Point(210, 590);
+            this.ctlProducto11.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto11.Name = "ctlProducto11";
             this.ctlProducto11.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto11.TabIndex = 10;
@@ -625,7 +631,8 @@
             // ctlProducto12
             // 
             this.ctlProducto12.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto12.Location = new System.Drawing.Point(375, 561);
+            this.ctlProducto12.Location = new System.Drawing.Point(410, 590);
+            this.ctlProducto12.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto12.Name = "ctlProducto12";
             this.ctlProducto12.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto12.TabIndex = 11;
@@ -633,10 +640,16 @@
             // ctlProducto13
             // 
             this.ctlProducto13.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto13.Location = new System.Drawing.Point(3, 747);
+            this.ctlProducto13.Location = new System.Drawing.Point(10, 785);
+            this.ctlProducto13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.ctlProducto13.Name = "ctlProducto13";
             this.ctlProducto13.Size = new System.Drawing.Size(180, 180);
             this.ctlProducto13.TabIndex = 12;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 20;
+            this.bunifuElipse2.TargetControl = this.btnCancelar;
             // 
             // frmVentas
             // 
@@ -650,6 +663,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentas";
             this.Text = "frmVentas";
+            this.Load += new System.EventHandler(this.frmVentas_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
