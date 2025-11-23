@@ -120,8 +120,8 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAABEwAAAKMCAYAAADxOS00AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABEqSURBVHhe7d2hbh1XGEbRwMDCwsDAQMM8QmBgYGGgod+i
+        iVBORw0KGgoAAAANSUhEUgAABEwAAAKLCAYAAADsPB2MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABEkSURBVHhe7d2hbh1XGEbRwMDCwsDAQMM8QmBgYGGgod+i
         sI9RWFhYGBgYWBj0n1ONdWXXW1HaQN9ZS/qANeP7AFtnZl68AAAAAODH7b1f773f7r0/7L3vzMzMzMzM
         zMye2Y6mcbSNN+0eP2yt9XFmPm0AAACAKzEzny8R5WVbyHcdJ0pm5s/+IAAAAMC1OA6JrLVu2kW+6Tii
         MjNf+yMAAAAAV+q2feSJy8kSsQQAAAA4m7ftJA88hgMAAACc0cx82Xv/1FZy/4LX3gwAAABwFjPzW3vJ
@@ -191,41 +191,10 @@
         AAAAEIIJAAAAQAgmAAAAACGYAAAAAIRgAgAAABCCCQAAAEAIJgAAAAAhmAAAAACEYAIAAAAQggkAAABA
         CCYAAAAAIZgAAAAAhGACAAAAEIIJAAAAQAgmAAAAACGYAAAAAIRgAgAAABCCCQAAAEAIJgAAAAAhmAAA
         AACEYAIAAAAQggkAAABACCYAAAAAIZgAAAAAhGACAAAAEIIJAAAAQAgmAAAAACGYAAAAAIRgAgAAABCC
-        CQAAAEAIJgAAAAAhmAAAAACEYAIAAAAQT4LJba8CAAAAnNCTYPKhVwEAAABO6DGYrLVuehUAAADgbNZa
-        7/99wuTlzPzdmwAAAABO5tVDMDnMzK+9AwAAAOAsZuavJ7HksPf+eWa+9GYAAACAazczX/feb9pL7u29
-        3/UfAAAAAE7gtp3kCY/mAAAAAGcyM7+3j3zT8ZlhL4EFAAAArtnlMZzvnyypyztN/uiPAQAAADx3M/Np
-        rXXTHvK/HZ/TWWv9sve+MzMzMzMzMzN7zltrfdx7v27/AAAAAOA//AMuA0i1Qi1PsAAAAABJRU5ErkJg
-        gg==
+        CQAAAEAIJgAAAAAhmAAAAADEk2By26sAAAAAJ/QkmHzoVQAAAIATegwma62bXgUAAAA4m7XW+3+fMHk5
+        M3/3JgAAAICTefUQTA4z82vvAAAAADiLmfnrSSw57L1/npkvvRkAAADg2s3M1733m/aSe3vvd/0HAAAA
+        gBO4bSd5wqM5AAAAwJnMzO/tI990fGbYS2ABAACAa3Z5DOf7J0vq8k6TP/pjAAAAAM/dzHxaa920h/xv
+        x+d01lq/7L3vzMzMzMzMzMye89ZaH/fer9s/AAAAAPgP/wDc4jHc1ID+GQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="dtpFechaFin.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFwSURBVFhHtZZBTsNADEWDuAEdKnEBlixZI7HlMNygnADR
-        5hY9UAWpepYgR7IxP+PMuJ48yVL6/W1PO5OkXQd8v96PFKjXEq0PN4jWhxtE68MN3PVf28uTLspd14ZV
-        TzNg7B+6weHu5zl3XRtL9ThXyDXBYk9Y9ThXQONagXMFNK4VOFdA41qBc4WiIUixf9EQpNgfDdZP59Ux
-        j7qABquhV8c86gIarIZevRostBp69WquLjTo0+Vxvzl/4MJIoxz6my1g7MabfRrecTAGecgrhbgALCjp
-        BDXEfJ+Gt890eqCga8zLIrAhGks6ob95vzm/6JyGcuyjmknEhtYgS6d9zQ1HH6MXMZ0JNFqDLF0fONa0
-        X2sM5w5p2C0aa+B62uecrjVGnwkxHrvxFo01cD0dtpyuNYa8swV4g5vxZ2sBGLMF6D+lnsBB1hZgUO7f
-        FkSxDuES7J8OYRTrNrSY3YYtCD2IWhB6FLfi6pdRa7yv41+rz+XU8viYgwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="dtpFechaInicio.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFwSURBVFhHtZZBTsNADEWDuAEdKnEBlixZI7HlMNygnADR
-        5hY9UAWpepYgR7IxP+PMuJ48yVL6/W1PO5OkXQd8v96PFKjXEq0PN4jWhxtE68MN3PVf28uTLspd14ZV
-        TzNg7B+6weHu5zl3XRtL9ThXyDXBYk9Y9ThXQONagXMFNK4VOFdA41qBc4WiIUixf9EQpNgfDdZP59Ux
-        j7qABquhV8c86gIarIZevRostBp69WquLjTo0+Vxvzl/4MJIoxz6my1g7MabfRrecTAGecgrhbgALCjp
-        BDXEfJ+Gt890eqCga8zLIrAhGks6ob95vzm/6JyGcuyjmknEhtYgS6d9zQ1HH6MXMZ0JNFqDLF0fONa0
-        X2sM5w5p2C0aa+B62uecrjVGnwkxHrvxFo01cD0dtpyuNYa8swV4g5vxZ2sBGLMF6D+lnsBB1hZgUO7f
-        FkSxDuES7J8OYRTrNrSY3YYtCD2IWhB6FLfi6pdRa7yv41+rz+XU8viYgwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>162, 17</value>
-  </metadata>
 </root>
