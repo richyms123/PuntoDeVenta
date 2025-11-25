@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CapaDatos.Objetos
 {
-    internal class Producto
+    public class Producto
     {
         public int idProducto { get; set; }
         public string Nombre { get; set; }

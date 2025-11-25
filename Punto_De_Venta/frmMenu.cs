@@ -1,9 +1,11 @@
-﻿using FontAwesome.Sharp.Material;
+﻿using CapaDatos.Objetos;
+using FontAwesome.Sharp.Material;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,8 +121,38 @@ namespace Punto_De_Venta
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
+           
+            if (EmpleadoGlobal.Rol != 1)
+            {
+                lblRol.Text = "Empleado";
+                btnAuditoria.Visible = false;
+                btnEmpleados.Visible = false;
+            }
+            else
+            {
+                lblRol.Text = "Administrador";
+            }
+            lblUsuario.Text = EmpleadoGlobal.Usuario;
+            if(EmpleadoGlobal.FotoEmpleado != null)
+                pictureUsuario.Image = ByteAImagen();
             ActivarBoton(btnInicio, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmInicio());
+        }
+
+        /*private byte[] ConvertirImg()
+        {
+            ImageConverter img = new ImageConverter();
+            byte[] bytes = (byte[])img.ConvertTo(new Bitmap(rde.pictureImagenUsuario.Image), typeof(byte[]));
+            return bytes;
+        }*/
+
+        private Image ByteAImagen()
+        {
+            MemoryStream ms = new MemoryStream(EmpleadoGlobal.FotoEmpleado);
+            Bitmap bm = null;
+            bm = new Bitmap(ms);
+            return bm;
+
         }
     }
 }
