@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Consultas;
+using CapaDatos.Objetos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,7 @@ namespace Punto_De_Venta
     public partial class frmReEdEmpleados : Form
     {
         private OpenFileDialog abrir;
+        private RepositorioEmpleados repositorio;
         public frmReEdEmpleados()
         {
             InitializeComponent();
@@ -132,6 +135,35 @@ namespace Punto_De_Venta
             if (!ValidarCampos()) return;
             try
             {
+
+
+                Empleado empleado = new Empleado
+                {
+                    Nombre = txtNombre.Text.Trim(),
+                    Apellidos = txtApellidos.Text.Trim(),
+                    Usuario = txtUsuario.Text.Trim(),
+                    Pasword = txtContrasena.Text.Trim(),
+                    Rol = cboRol.SelectedIndex + 1,
+                    Turno = cboTurno.SelectedItem.ToString(),
+                    Direccion = txtCalle.Text.Trim(),
+                    Municipio = txtMunicipio.Text.Trim(),
+                    Estado = txtEstado.Text.Trim(),
+                    CodigoPostal = txtCp.Text.Trim(),
+                    Mail = txtCorreo.Text.Trim(),
+                    FotoEmpleado = ConvertirImg(),
+                    FechaDeAlta = DateTime.Now,
+                    FehaNacimiento = dtpFechaNacimiento.Value
+
+                };
+                int result = repositorio.Agregar(empleado);
+                if (result > 0)
+                {
+                    MessageBox.Show("Empleado agregado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar un empleado");
+                }
                 // Lógica para guardar los datos del empleado
             }
             catch (Exception ex)
@@ -151,6 +183,13 @@ namespace Punto_De_Venta
             {
                 e.Handled = true;
             }
+        }
+
+        private byte[] ConvertirImg()
+        {
+            ImageConverter img = new ImageConverter();
+            byte[] bytes = (byte[])img.ConvertTo(new Bitmap(pictureEmpleado.Image), typeof(byte[]));
+            return bytes;
         }
 
         private void pictureEmpleado_DoubleClick(object sender, EventArgs e)

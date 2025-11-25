@@ -40,14 +40,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.pictureUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnCerrar = new FontAwesome.Sharp.Material.MaterialButton();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlMenuLateral.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,7 +233,7 @@
             // 
             this.panel2.Controls.Add(this.lblRol);
             this.panel2.Controls.Add(this.lblUsuario);
-            this.panel2.Controls.Add(this.bunifuPictureBox1);
+            this.panel2.Controls.Add(this.pictureUsuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -262,21 +262,21 @@
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Richyms";
             // 
-            // bunifuPictureBox1
+            // pictureUsuario
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 28;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(9, 20);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(57, 57);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 0;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.pictureUsuario.AllowFocused = false;
+            this.pictureUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureUsuario.AutoSizeHeight = true;
+            this.pictureUsuario.BorderRadius = 28;
+            this.pictureUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureUsuario.Image")));
+            this.pictureUsuario.IsCircle = true;
+            this.pictureUsuario.Location = new System.Drawing.Point(9, 20);
+            this.pictureUsuario.Name = "pictureUsuario";
+            this.pictureUsuario.Size = new System.Drawing.Size(57, 57);
+            this.pictureUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureUsuario.TabIndex = 0;
+            this.pictureUsuario.TabStop = false;
+            this.pictureUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // panel1
             // 
@@ -343,7 +343,7 @@
             this.pnlMenuLateral.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -352,7 +352,7 @@
         #endregion
         private System.Windows.Forms.Panel pnlMenuLateral;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private Bunifu.UI.WinForms.BunifuPictureBox pictureUsuario;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblUsuario;
         private FontAwesome.Sharp.Material.MaterialButton btnVentas;

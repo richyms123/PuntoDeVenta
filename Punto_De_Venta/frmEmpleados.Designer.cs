@@ -34,18 +34,11 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnNuevoEmpleado = new FontAwesome.Sharp.Material.MaterialButton();
             this.pnlContenedor = new System.Windows.Forms.FlowLayoutPanel();
-            this.ctlEmpleado4 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
-            this.ctlEmpleado5 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
-            this.ctlEmpleado6 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
-            this.ctlEmpleado7 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
-            this.ctlEmpleado8 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
-            this.ctlEmpleado9 = new Punto_De_Venta.ControlesUsuario.ctlEmpleado();
             this.materialPictureBox2 = new FontAwesome.Sharp.Material.MaterialPictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,70 +96,10 @@
             // 
             this.pnlContenedor.AutoScroll = true;
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado4);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado5);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado6);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado7);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado8);
-            this.pnlContenedor.Controls.Add(this.ctlEmpleado9);
             this.pnlContenedor.Location = new System.Drawing.Point(18, 93);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1063, 560);
             this.pnlContenedor.TabIndex = 7;
-            // 
-            // ctlEmpleado4
-            // 
-            this.ctlEmpleado4.BackColor = System.Drawing.Color.Transparent;
-            this.ctlEmpleado4.Location = new System.Drawing.Point(5, 5);
-            this.ctlEmpleado4.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlEmpleado4.Name = "ctlEmpleado4";
-            this.ctlEmpleado4.Size = new System.Drawing.Size(506, 140);
-            this.ctlEmpleado4.TabIndex = 3;
-            // 
-            // ctlEmpleado5
-            // 
-            this.ctlEmpleado5.BackColor = System.Drawing.Color.Transparent;
-            this.ctlEmpleado5.Location = new System.Drawing.Point(521, 5);
-            this.ctlEmpleado5.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlEmpleado5.Name = "ctlEmpleado5";
-            this.ctlEmpleado5.Size = new System.Drawing.Size(506, 140);
-            this.ctlEmpleado5.TabIndex = 4;
-            // 
-            // ctlEmpleado6
-            // 
-            this.ctlEmpleado6.BackColor = System.Drawing.Color.Transparent;
-            this.ctlEmpleado6.Location = new System.Drawing.Point(5, 155);
-            this.ctlEmpleado6.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlEmpleado6.Name = "ctlEmpleado6";
-            this.ctlEmpleado6.Size = new System.Drawing.Size(506, 140);
-            this.ctlEmpleado6.TabIndex = 5;
-            // 
-            // ctlEmpleado7
-            // 
-            this.ctlEmpleado7.BackColor = System.Drawing.Color.Transparent;
-            this.ctlEmpleado7.Location = new System.Drawing.Point(521, 155);
-            this.ctlEmpleado7.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlEmpleado7.Name = "ctlEmpleado7";
-            this.ctlEmpleado7.Size = new System.Drawing.Size(506, 140);
-            this.ctlEmpleado7.TabIndex = 6;
-            // 
-            // ctlEmpleado8
-            // 
-            this.ctlEmpleado8.BackColor = System.Drawing.Color.Transparent;
-            this.ctlEmpleado8.Location = new System.Drawing.Point(5, 305);
-            this.ctlEmpleado8.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlEmpleado8.Name = "ctlEmpleado8";
-            this.ctlEmpleado8.Size = new System.Drawing.Size(506, 140);
-            this.ctlEmpleado8.TabIndex = 7;
-            // 
-            // ctlEmpleado9
-            // 
-            this.ctlEmpleado9.BackColor = System.Drawing.Color.Transparent;
-            this.ctlEmpleado9.Location = new System.Drawing.Point(521, 305);
-            this.ctlEmpleado9.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlEmpleado9.Name = "ctlEmpleado9";
-            this.ctlEmpleado9.Size = new System.Drawing.Size(506, 140);
-            this.ctlEmpleado9.TabIndex = 8;
             // 
             // materialPictureBox2
             // 
@@ -211,7 +144,6 @@
             this.panel1.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            this.pnlContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -224,13 +156,7 @@
         private FontAwesome.Sharp.Material.MaterialPictureBox materialPictureBox2;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.FlowLayoutPanel pnlContenedor;
-        private ControlesUsuario.ctlEmpleado ctlEmpleado4;
-        private ControlesUsuario.ctlEmpleado ctlEmpleado5;
-        private ControlesUsuario.ctlEmpleado ctlEmpleado6;
         private FontAwesome.Sharp.Material.MaterialButton btnNuevoEmpleado;
-        private ControlesUsuario.ctlEmpleado ctlEmpleado7;
-        private ControlesUsuario.ctlEmpleado ctlEmpleado8;
-        private ControlesUsuario.ctlEmpleado ctlEmpleado9;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

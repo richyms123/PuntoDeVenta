@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos.Objetos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Punto_De_Venta.ControlesUsuario
 {
     public partial class ctlEmpleado : UserControl
     {
+        
         private Color colorSinFoco = Color.WhiteSmoke;
         private Color colorConFoco = Color.FromArgb(216, 67, 21);
         public ctlEmpleado()
@@ -31,6 +33,8 @@ namespace Punto_De_Venta.ControlesUsuario
             toolTip.SetToolTip(btnEditar, "Editar Empleado");
             toolTip.SetToolTip(btnEliminar, "Eliminar Empleado");
         }
+
+       
 
         private void Efecto_MouseEnter(object sender, EventArgs e)
         {

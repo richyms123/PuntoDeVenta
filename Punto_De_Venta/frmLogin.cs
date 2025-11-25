@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos.Consultas;
+using CapaDatos.Objetos;
 
 namespace Punto_De_Venta
 {
     public partial class frmLogin : Form
     {
+       
+        private RepositorioEmpleados empleado= new RepositorioEmpleados();
         public frmLogin()
         {
             InitializeComponent();
@@ -44,7 +48,6 @@ namespace Punto_De_Venta
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            
             if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
                 MessageBox.Show("Por favor ingresa tu nombre de usuario.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -59,8 +62,18 @@ namespace Punto_De_Venta
                 txtContrasena.Focus();
                 return;
             }
+            Empleado emp=empleado.Login(txtUsuario.Text, txtContrasena.Text);
+            if (emp == null)
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContrasena.Focus();
+                return;
+            }
+            EmpleadoGlobal.Nombre= emp.Nombre;
+            EmpleadoGlobal.Apellidos= emp.Apellidos;
+            EmpleadoGlobal.Rol= emp.Rol;
+            EmpleadoGlobal.Usuario= emp.Usuario;
 
-            //Si todo esta bien lo deja entrar
             using (var menu = new frmMenu())
             {
                 if (menu.ShowDialog() == DialogResult.OK)
