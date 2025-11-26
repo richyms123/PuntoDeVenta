@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -16,7 +18,8 @@ namespace Punto_De_Venta
     public partial class frmReEdEmpleados : Form
     {
         private OpenFileDialog abrir;
-        private RepositorioEmpleados repositorio;
+        public bool esModEdicion { get; set; } = false;
+        private RepositorioEmpleados repositorio=new RepositorioEmpleados();
         public frmReEdEmpleados()
         {
             InitializeComponent();
@@ -94,7 +97,7 @@ namespace Punto_De_Venta
                 return false;
             }
 
-            if (cboRol.SelectedIndex == -1 || cboRol.SelectedIndex==0)
+            if (cboRol.SelectedIndex == -1)
             {
                 MessageBox.Show("Debes seleccionar un Rol (Empleado/Admin).", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cboRol.DroppedDown = true;
@@ -127,6 +130,46 @@ namespace Punto_De_Venta
         {
             cboTurno.SelectedIndex = 0;
             cboRol.SelectedIndex = 0;
+            if (esModEdicion)
+            {
+                txtNombre.Text = EmpleadoGlobal.Nombre;
+                txtApellidos.Text = EmpleadoGlobal.Apellidos;
+                txtUsuario.Text= EmpleadoGlobal.Usuario;
+                txtContrasena.Text = EmpleadoGlobal.Pasword;
+                cboRol.SelectedIndex = EmpleadoGlobal.Rol;
+                if (EmpleadoGlobal.Turno == "Matutino")
+                    cboTurno.SelectedIndex = 1;
+                else
+                    cboTurno.SelectedIndex = 2;
+                txtCalle.Text = EmpleadoGlobal.Direccion;
+                txtMunicipio.Text = EmpleadoGlobal.Municipio;
+                txtPais.Text = EmpleadoGlobal.Pais;
+                txtTelefono.Text = EmpleadoGlobal.Telefono;
+                txtEstado.Text = EmpleadoGlobal.Estado;
+                txtCp.Text = EmpleadoGlobal.CodigoPostal;
+                txtCorreo.Text = EmpleadoGlobal.Mail;
+                if(ByteAImagen()!=null)
+                    pictureEmpleado.Image = ByteAImagen();
+                
+                dtpFechaNacimiento.Value=EmpleadoGlobal.FechaNacimiento;
+            }
+
+        }
+
+        private Image ByteAImagen()
+        {
+            try
+            {
+                using (var ms = new MemoryStream(EmpleadoGlobal.FotoEmpleado))
+                using (var tmp = Image.FromStream(ms))
+                {
+                    return new Bitmap(tmp); // devuelve una copia independiente
+                }
+            }
+            catch
+            {
+                return null;
+            }
 
         }
 
@@ -139,6 +182,7 @@ namespace Punto_De_Venta
 
                 Empleado empleado = new Empleado
                 {
+                    idEmpleado = EmpleadoGlobal.idEmpleado,
                     Nombre = txtNombre.Text.Trim(),
                     Apellidos = txtApellidos.Text.Trim(),
                     Usuario = txtUsuario.Text.Trim(),
@@ -147,6 +191,8 @@ namespace Punto_De_Venta
                     Turno = cboTurno.SelectedItem.ToString(),
                     Direccion = txtCalle.Text.Trim(),
                     Municipio = txtMunicipio.Text.Trim(),
+                    Pais = txtPais.Text.Trim(),
+                    Telefono = txtTelefono.Text.Trim(),
                     Estado = txtEstado.Text.Trim(),
                     CodigoPostal = txtCp.Text.Trim(),
                     Mail = txtCorreo.Text.Trim(),
@@ -155,16 +201,33 @@ namespace Punto_De_Venta
                     FehaNacimiento = dtpFechaNacimiento.Value
 
                 };
-                int result = repositorio.Agregar(empleado);
-                if (result > 0)
+                if (esModEdicion)
                 {
-                    MessageBox.Show("Empleado agregado correctamente");
+                    empleado.Activo = true;
+                    int result = repositorio.Editar(empleado);
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Empleado editado correctamente");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al editar un empleado");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar un empleado");
+                    int result = repositorio.Agregar(empleado);
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Empleado agregado correctamente");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al agregar un empleado");
+                    }
                 }
-                // Lógica para guardar los datos del empleado
             }
             catch (Exception ex)
             {
@@ -187,9 +250,15 @@ namespace Punto_De_Venta
 
         private byte[] ConvertirImg()
         {
-            ImageConverter img = new ImageConverter();
-            byte[] bytes = (byte[])img.ConvertTo(new Bitmap(pictureEmpleado.Image), typeof(byte[]));
-            return bytes;
+            if (pictureEmpleado.Image != null)
+            {
+                using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+                {
+                    pictureEmpleado.Image.Save(ms,System.Drawing.Imaging.ImageFormat.Jpeg);
+                    return ms.ToArray();
+                }
+            }
+            return null;
         }
 
         private void pictureEmpleado_DoubleClick(object sender, EventArgs e)

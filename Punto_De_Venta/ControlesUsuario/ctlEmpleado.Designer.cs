@@ -99,6 +99,7 @@
             this.toolTip.SetToolTip(this.btnEditar, "");
             this.toolTip.SetToolTipIcon(this.btnEditar, null);
             this.toolTip.SetToolTipTitle(this.btnEditar, "");
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // bunifuShapes2
             // 
@@ -136,6 +137,7 @@
             this.toolTip.SetToolTip(this.btnEliminar, "");
             this.toolTip.SetToolTipIcon(this.btnEliminar, null);
             this.toolTip.SetToolTipTitle(this.btnEliminar, "");
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // bunifuShapes1
             // 
@@ -280,7 +282,7 @@
             this.pictureEmpleado.Location = new System.Drawing.Point(47, 14);
             this.pictureEmpleado.Name = "pictureEmpleado";
             this.pictureEmpleado.Size = new System.Drawing.Size(70, 70);
-            this.pictureEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureEmpleado.TabIndex = 1;
             this.pictureEmpleado.TabStop = false;
             this.toolTip.SetToolTip(this.pictureEmpleado, "");

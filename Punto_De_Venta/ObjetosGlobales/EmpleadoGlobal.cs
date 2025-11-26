@@ -33,6 +33,7 @@ namespace CapaDatos.Objetos
         public static string Mail { get; set; }
         public static byte[] FotoEmpleado { get; set; }
         public static DateTime FechaDeAlta { get; set; }
+        public static DateTime FechaNacimiento { get; set; }
 
 
 

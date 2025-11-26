@@ -73,6 +73,7 @@ namespace Punto_De_Venta
             EmpleadoGlobal.Apellidos= emp.Apellidos;
             EmpleadoGlobal.Rol= emp.Rol;
             EmpleadoGlobal.Usuario= emp.Usuario;
+            EmpleadoGlobal.FotoEmpleado= emp.FotoEmpleado;
 
             using (var menu = new frmMenu())
             {
