@@ -1273,7 +1273,6 @@
             this.Name = "frmReEdEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReEdEmpleados";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmReEdEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEmpleado)).EndInit();

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CapaDatos.Consultas;
+using CapaDatos.Objetos;
+using Punto_De_Venta.ControlesUsuario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,26 +17,68 @@ namespace Punto_De_Venta
     {
         Form frmBackGround = new Form();
         frmReEdEmpleados frm;
+        private RepositorioEmpleados repo= new RepositorioEmpleados();
         public frmEmpleados()
         {
             InitializeComponent();
         }
 
+        private void CargarControl(List<Empleado> empleados)
+        {
+            pnlContenedor.SuspendLayout();
+            pnlContenedor.Controls.Clear();
+            foreach(Empleado emp in empleados)
+            {
+                ctlEmpleado ctl = new ctlEmpleado();
+                ctl.Empleado = emp;
+                pnlContenedor.Controls.Add(ctl);
+                ctl.BringToFront();
+                ctl.btnEditar.Click += BtnEditar_Click;
+                ctl.btnEliminar.Click += BtnEliminar_Click;
+            }
+            pnlContenedor.ResumeLayout();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            using(frm=new frmReEdEmpleados())
+            {
+                frm.esModEdicion = true;
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    LlenarEmpleados();
+                }
+            }
+        }
+
+        private void LlenarEmpleados()
+        {
+            List<Empleado> empleados = repo.ObtenerTodos();
+            if(empleados!=null)
+                CargarControl(empleados);
+        }
+
         private void btnNuevoEmpleado_Click(object sender, EventArgs e)
         {
-            frmBackGround = new Form();
+            //frmBackGround = new Form();
             using (frm = new frmReEdEmpleados())
             {
 
 
-                frm.Owner = frmBackGround;
+                //.Owner = frmBackGround;
                 //frm.EsModoEdicion = false;
-                ConfigurarFormBackground(frmBackGround);
+                //ConfigurarFormBackground(frmBackGround);
 
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
+                    LlenarEmpleados();
                 }
-                frmBackGround.Dispose();
+                //frmBackGround.Dispose();
             }
         }
         private void ConfigurarFormBackground(Form frmBackGround)
@@ -47,6 +92,11 @@ namespace Punto_De_Venta
             frmBackGround.TopMost = true;
             frmBackGround.ShowInTaskbar = false;
             frmBackGround.Show();
+        }
+
+        private void frmEmpleados_Load(object sender, EventArgs e)
+        {
+            LlenarEmpleados();
         }
     }
 }
