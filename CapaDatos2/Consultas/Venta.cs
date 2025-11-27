@@ -19,47 +19,70 @@ namespace CapaDatos2.Consultas
         /// faltante a la tabla de Ventas.
         /// </summary>
         /// <param name="lista">Es una lista de Detalles de Venta que contiene todos los productos.</param>
-        /// <param name="idVenta">Valor de la nueva venta a realizar.</param>
         /// <param name="metodoDePago">Metodo de pago elegido por el cliente.</param>
         /// <param name="idEmpleado">ID del empleado en turno.</param>
         /// <returns>Retorna True en caso de que se hayan insertado los datos, tanto en la tabla Detalle de Venta,
         /// asi como en la tabla de Ventas.</returns>
-        public bool RealizarVenta(List<DetalleVenta> lista, int idVenta, string metodoDePago, int idEmpleado)
+        public bool RealizarVenta(List<DetalleVenta> lista, string metodoDePago, int idEmpleado)
         {
             using (MySqlConnection connection = new Conexion().ObtenerConexion())
             {
-                float totalVenta = 0;
 
                 MySqlTransaction transaction = connection.BeginTransaction();
 
                 try
                 {
-                    MySqlCommand venta_vacia = new MySqlCommand("crear_venta_vacia", connection);
-                    venta_vacia.Parameters.AddWithValue("@nMetodoPago", metodoDePago);
-                    venta_vacia.Parameters.AddWithValue("@nidEmpleado", idEmpleado);
-                    venta_vacia.ExecuteNonQuery();
+                    int idVentaGenerado = 0;
+                    using (MySqlCommand venta_vacia = new MySqlCommand("crear_venta_vacia", connection))
+                    {
+                        venta_vacia.Transaction = transaction;
+                        venta_vacia.CommandType = CommandType.StoredProcedure;
+
+                        venta_vacia.Parameters.AddWithValue("@nMetodoPago", metodoDePago);
+                        venta_vacia.Parameters.AddWithValue("@nidEmpleado", idEmpleado);
+
+                        MySqlParameter outId = new MySqlParameter("@idVentaGenerado", MySqlDbType.Int32);
+                        outId.Direction = ParameterDirection.Output;
+                        venta_vacia.Parameters.Add(outId);
+
+                        venta_vacia.ExecuteNonQuery();
+                        idVentaGenerado = Convert.ToInt32(outId.Value);
+                    }
+
+                    decimal totalVenta = 0;
 
                     foreach (DetalleVenta product in lista)
                     {
                         using (MySqlCommand insertarDetalle = new MySqlCommand("insertar_detalle_venta", connection))
                         {
+                            insertarDetalle.Transaction = transaction;
+                            insertarDetalle.CommandType = CommandType.StoredProcedure;
+
                             insertarDetalle.Parameters.AddWithValue("@nidProducto", product.idProducto);
-                            insertarDetalle.Parameters.AddWithValue("@nidVenta", product.idVenta);
+                            insertarDetalle.Parameters.AddWithValue("@nidVenta", idVentaGenerado);
                             insertarDetalle.Parameters.AddWithValue("@nPrecioUnitario", product.PrecioUnitario);
                             insertarDetalle.Parameters.AddWithValue("@nCantidad", product.Cantidad);
                             insertarDetalle.Parameters.AddWithValue("@nDescuento", product.Descuento);
                             insertarDetalle.Parameters.AddWithValue("@nSubTotal", product.SubTotal);
+
                             insertarDetalle.ExecuteNonQuery();
 
-                            totalVenta += product.SubTotal;
+                            totalVenta += (decimal)product.SubTotal;
                         }
                     }
 
-                    MySqlCommand finalizar_venta = new MySqlCommand("finalizar_venta", connection);
-                    finalizar_venta.Parameters.AddWithValue("@nidVenta", idVenta);
-                    finalizar_venta.Parameters.AddWithValue("@nMetodoPago", metodoDePago);
-                    finalizar_venta.Parameters.AddWithValue("@nTotalVenta", totalVenta);
-                    finalizar_venta.ExecuteNonQuery();
+                    using(MySqlCommand finalizar_venta = new MySqlCommand("finalizar_venta", connection))
+                    {
+                        finalizar_venta.Transaction = transaction;
+                        finalizar_venta.CommandType = CommandType.StoredProcedure;
+
+                        finalizar_venta.Parameters.AddWithValue("@nidVenta", idVentaGenerado);
+                        finalizar_venta.Parameters.AddWithValue("@nMetodoPago", metodoDePago);
+                        finalizar_venta.Parameters.AddWithValue("@nTotalVenta", totalVenta);
+
+                        finalizar_venta.ExecuteNonQuery();
+                    }
+                    
 
                     transaction.Commit();
                     return true;
@@ -68,35 +91,6 @@ namespace CapaDatos2.Consultas
                 {
                     transaction.Rollback();
                     return false;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Calcula el siguiente id de la tabla Venta para asignarle a una nueva venta.
-        /// </summary>
-        /// <returns>El siguiente id calculado.</returns>
-        public int nuevoIdVenta()
-        {
-            using (MySqlConnection connection = new Conexion().ObtenerConexion())
-            {
-                try
-                {
-                    MySqlCommand cmd = new MySqlCommand("nueva_venta", connection);
-                    MySqlParameter outId = new MySqlParameter("nuevoId", MySqlDbType.Int32);
-
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    outId.Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add(outId);
-
-                    cmd.ExecuteNonQuery();
-
-                    return Convert.ToInt32(outId.Value);
-                }
-                catch (Exception ex)
-                {
-                    return 0;
                 }
             }
         }
