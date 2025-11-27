@@ -122,7 +122,6 @@ namespace CapaDatos2.Consultas
                         {
                             while (reader.Read())
                             {
-                                // Llenamos el objeto con los datos de la fila
                                 ReporteVenta reporte = new ReporteVenta();
 
                                 reporte.idProducto = Convert.ToInt32(reader["Clave"]);
