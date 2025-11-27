@@ -1,8 +1,10 @@
 ﻿using CapaDatos;
 using CapaDatos.Objetos;
+using CapaDatos2.Objetos;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -91,6 +93,52 @@ namespace CapaDatos2.Consultas
                 {
                     transaction.Rollback();
                     return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Obtiene una lista de todos los reportes de ventas obtenidas entre dos fechas diferentes.
+        /// </summary>
+        /// <param name="PrimeraFecha">Es una lista de Detalles de Venta que contiene todos los productos.</param>
+        /// <param name="SegundaFecha">Metodo de pago elegido por el cliente.</param>
+        /// <returns>Retorna una lista de Reportes donde proporciona el id del producto, nombre, las unidades
+        /// y el monto total de ese producto durante el mes.</returns>
+        public List<ReporteVenta> ObtenerReporte(DateTime PrimeraFecha, DateTime SegundaFecha)
+        {
+            using (MySqlConnection connection = new Conexion().ObtenerConexion())
+            {
+                try
+                {
+                    using (MySqlCommand generar_reporte = new MySqlCommand("generar_reporte", connection))
+                    {
+                        List<ReporteVenta> lista = new List<ReporteVenta>();
+
+                        generar_reporte.CommandType = CommandType.StoredProcedure;
+                        generar_reporte.Parameters.AddWithValue("nPrimeraFecha", PrimeraFecha);
+                        generar_reporte.Parameters.AddWithValue("nSegundaFecha", SegundaFecha);
+
+                        using (MySqlDataReader reader = generar_reporte.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Llenamos el objeto con los datos de la fila
+                                ReporteVenta reporte = new ReporteVenta();
+
+                                reporte.idProducto = Convert.ToInt32(reader["Clave"]);
+                                reporte.Nombre = reader["NombreProducto"].ToString();
+                                reporte.Unidades = Convert.ToInt32(reader["Unidades"]);
+                                reporte.Monto = Convert.ToDecimal(reader["Monto"]);
+
+                                lista.Add(reporte);
+                            }
+                        }
+
+                        return lista;
+                    }
+                } catch
+                {
+                    return null;
                 }
             }
         }
