@@ -37,12 +37,6 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlProductos = new System.Windows.Forms.Panel();
-            this.ctlTicketProducto5 = new Punto_De_Venta.ControlesUsuario.ctlTicketProducto();
-            this.ctlTicketProducto4 = new Punto_De_Venta.ControlesUsuario.ctlTicketProducto();
-            this.ctlTicketProducto3 = new Punto_De_Venta.ControlesUsuario.ctlTicketProducto();
-            this.ctlTicketProducto2 = new Punto_De_Venta.ControlesUsuario.ctlTicketProducto();
-            this.ctlTicketProducto1 = new Punto_De_Venta.ControlesUsuario.ctlTicketProducto();
-            this.ctlTituloProductos1 = new Punto_De_Venta.ControlesUsuario.ctlTituloProductos();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.cboMetodoPago = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -58,27 +52,12 @@
             this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlContenedor = new System.Windows.Forms.FlowLayoutPanel();
-            this.ctlProducto1 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto2 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto3 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto4 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto5 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto6 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto7 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto8 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto9 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto10 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto11 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto12 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
-            this.ctlProducto13 = new Punto_De_Venta.ControlesUsuario.ctlProducto();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.pnlProductos.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -116,71 +95,11 @@
             // 
             this.pnlProductos.AutoSize = true;
             this.pnlProductos.BackColor = System.Drawing.Color.White;
-            this.pnlProductos.Controls.Add(this.ctlTicketProducto5);
-            this.pnlProductos.Controls.Add(this.ctlTicketProducto4);
-            this.pnlProductos.Controls.Add(this.ctlTicketProducto3);
-            this.pnlProductos.Controls.Add(this.ctlTicketProducto2);
-            this.pnlProductos.Controls.Add(this.ctlTicketProducto1);
-            this.pnlProductos.Controls.Add(this.ctlTituloProductos1);
             this.pnlProductos.Location = new System.Drawing.Point(3, 3);
             this.pnlProductos.MinimumSize = new System.Drawing.Size(325, 200);
             this.pnlProductos.Name = "pnlProductos";
-            this.pnlProductos.Size = new System.Drawing.Size(325, 300);
+            this.pnlProductos.Size = new System.Drawing.Size(325, 200);
             this.pnlProductos.TabIndex = 1;
-            // 
-            // ctlTicketProducto5
-            // 
-            this.ctlTicketProducto5.BackColor = System.Drawing.Color.White;
-            this.ctlTicketProducto5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTicketProducto5.Location = new System.Drawing.Point(0, 250);
-            this.ctlTicketProducto5.Name = "ctlTicketProducto5";
-            this.ctlTicketProducto5.Size = new System.Drawing.Size(325, 50);
-            this.ctlTicketProducto5.TabIndex = 5;
-            // 
-            // ctlTicketProducto4
-            // 
-            this.ctlTicketProducto4.BackColor = System.Drawing.Color.White;
-            this.ctlTicketProducto4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTicketProducto4.Location = new System.Drawing.Point(0, 200);
-            this.ctlTicketProducto4.Name = "ctlTicketProducto4";
-            this.ctlTicketProducto4.Size = new System.Drawing.Size(325, 50);
-            this.ctlTicketProducto4.TabIndex = 4;
-            // 
-            // ctlTicketProducto3
-            // 
-            this.ctlTicketProducto3.BackColor = System.Drawing.Color.White;
-            this.ctlTicketProducto3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTicketProducto3.Location = new System.Drawing.Point(0, 150);
-            this.ctlTicketProducto3.Name = "ctlTicketProducto3";
-            this.ctlTicketProducto3.Size = new System.Drawing.Size(325, 50);
-            this.ctlTicketProducto3.TabIndex = 3;
-            // 
-            // ctlTicketProducto2
-            // 
-            this.ctlTicketProducto2.BackColor = System.Drawing.Color.White;
-            this.ctlTicketProducto2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTicketProducto2.Location = new System.Drawing.Point(0, 100);
-            this.ctlTicketProducto2.Name = "ctlTicketProducto2";
-            this.ctlTicketProducto2.Size = new System.Drawing.Size(325, 50);
-            this.ctlTicketProducto2.TabIndex = 2;
-            // 
-            // ctlTicketProducto1
-            // 
-            this.ctlTicketProducto1.BackColor = System.Drawing.Color.White;
-            this.ctlTicketProducto1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTicketProducto1.Location = new System.Drawing.Point(0, 50);
-            this.ctlTicketProducto1.Name = "ctlTicketProducto1";
-            this.ctlTicketProducto1.Size = new System.Drawing.Size(325, 50);
-            this.ctlTicketProducto1.TabIndex = 1;
-            // 
-            // ctlTituloProductos1
-            // 
-            this.ctlTituloProductos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ctlTituloProductos1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTituloProductos1.Location = new System.Drawing.Point(0, 0);
-            this.ctlTituloProductos1.Name = "ctlTituloProductos1";
-            this.ctlTituloProductos1.Size = new System.Drawing.Size(325, 50);
-            this.ctlTituloProductos1.TabIndex = 0;
             // 
             // bunifuPanel4
             // 
@@ -197,7 +116,7 @@
             this.bunifuPanel4.Controls.Add(this.lblTotal);
             this.bunifuPanel4.Controls.Add(this.label2);
             this.bunifuPanel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuPanel4.Location = new System.Drawing.Point(3, 309);
+            this.bunifuPanel4.Location = new System.Drawing.Point(3, 209);
             this.bunifuPanel4.MinimumSize = new System.Drawing.Size(300, 0);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
@@ -283,6 +202,7 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCobrar
             // 
@@ -302,6 +222,7 @@
             this.btnCobrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCobrar.UseVisualStyleBackColor = false;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
             // 
             // lblTotal
             // 
@@ -511,140 +432,10 @@
             // 
             this.pnlContenedor.AutoScroll = true;
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.ctlProducto1);
-            this.pnlContenedor.Controls.Add(this.ctlProducto2);
-            this.pnlContenedor.Controls.Add(this.ctlProducto3);
-            this.pnlContenedor.Controls.Add(this.ctlProducto4);
-            this.pnlContenedor.Controls.Add(this.ctlProducto5);
-            this.pnlContenedor.Controls.Add(this.ctlProducto6);
-            this.pnlContenedor.Controls.Add(this.ctlProducto7);
-            this.pnlContenedor.Controls.Add(this.ctlProducto8);
-            this.pnlContenedor.Controls.Add(this.ctlProducto9);
-            this.pnlContenedor.Controls.Add(this.ctlProducto10);
-            this.pnlContenedor.Controls.Add(this.ctlProducto11);
-            this.pnlContenedor.Controls.Add(this.ctlProducto12);
-            this.pnlContenedor.Controls.Add(this.ctlProducto13);
             this.pnlContenedor.Location = new System.Drawing.Point(12, 119);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(743, 540);
             this.pnlContenedor.TabIndex = 316;
-            // 
-            // ctlProducto1
-            // 
-            this.ctlProducto1.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto1.Location = new System.Drawing.Point(10, 5);
-            this.ctlProducto1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto1.Name = "ctlProducto1";
-            this.ctlProducto1.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto1.TabIndex = 0;
-            // 
-            // ctlProducto2
-            // 
-            this.ctlProducto2.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto2.Location = new System.Drawing.Point(210, 5);
-            this.ctlProducto2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto2.Name = "ctlProducto2";
-            this.ctlProducto2.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto2.TabIndex = 1;
-            // 
-            // ctlProducto3
-            // 
-            this.ctlProducto3.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto3.Location = new System.Drawing.Point(410, 5);
-            this.ctlProducto3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto3.Name = "ctlProducto3";
-            this.ctlProducto3.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto3.TabIndex = 2;
-            // 
-            // ctlProducto4
-            // 
-            this.ctlProducto4.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto4.Location = new System.Drawing.Point(10, 200);
-            this.ctlProducto4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto4.Name = "ctlProducto4";
-            this.ctlProducto4.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto4.TabIndex = 3;
-            // 
-            // ctlProducto5
-            // 
-            this.ctlProducto5.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto5.Location = new System.Drawing.Point(210, 200);
-            this.ctlProducto5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto5.Name = "ctlProducto5";
-            this.ctlProducto5.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto5.TabIndex = 4;
-            // 
-            // ctlProducto6
-            // 
-            this.ctlProducto6.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto6.Location = new System.Drawing.Point(410, 200);
-            this.ctlProducto6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto6.Name = "ctlProducto6";
-            this.ctlProducto6.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto6.TabIndex = 5;
-            // 
-            // ctlProducto7
-            // 
-            this.ctlProducto7.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto7.Location = new System.Drawing.Point(10, 395);
-            this.ctlProducto7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto7.Name = "ctlProducto7";
-            this.ctlProducto7.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto7.TabIndex = 6;
-            // 
-            // ctlProducto8
-            // 
-            this.ctlProducto8.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto8.Location = new System.Drawing.Point(210, 395);
-            this.ctlProducto8.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto8.Name = "ctlProducto8";
-            this.ctlProducto8.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto8.TabIndex = 7;
-            // 
-            // ctlProducto9
-            // 
-            this.ctlProducto9.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto9.Location = new System.Drawing.Point(410, 395);
-            this.ctlProducto9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto9.Name = "ctlProducto9";
-            this.ctlProducto9.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto9.TabIndex = 8;
-            // 
-            // ctlProducto10
-            // 
-            this.ctlProducto10.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto10.Location = new System.Drawing.Point(10, 590);
-            this.ctlProducto10.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto10.Name = "ctlProducto10";
-            this.ctlProducto10.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto10.TabIndex = 9;
-            // 
-            // ctlProducto11
-            // 
-            this.ctlProducto11.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto11.Location = new System.Drawing.Point(210, 590);
-            this.ctlProducto11.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto11.Name = "ctlProducto11";
-            this.ctlProducto11.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto11.TabIndex = 10;
-            // 
-            // ctlProducto12
-            // 
-            this.ctlProducto12.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto12.Location = new System.Drawing.Point(410, 590);
-            this.ctlProducto12.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto12.Name = "ctlProducto12";
-            this.ctlProducto12.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto12.TabIndex = 11;
-            // 
-            // ctlProducto13
-            // 
-            this.ctlProducto13.BackColor = System.Drawing.Color.Transparent;
-            this.ctlProducto13.Location = new System.Drawing.Point(10, 785);
-            this.ctlProducto13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.ctlProducto13.Name = "ctlProducto13";
-            this.ctlProducto13.Size = new System.Drawing.Size(180, 180);
-            this.ctlProducto13.TabIndex = 12;
             // 
             // bunifuElipse2
             // 
@@ -668,13 +459,11 @@
             this.bunifuPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            this.pnlProductos.ResumeLayout(false);
             this.bunifuPanel4.ResumeLayout(false);
             this.bunifuPanel4.PerformLayout();
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel3.PerformLayout();
             this.bunifuPanel2.ResumeLayout(false);
-            this.pnlContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -697,26 +486,7 @@
         private System.Windows.Forms.FlowLayoutPanel pnlContenedor;
         private FontAwesome.Sharp.Material.MaterialButton btnCancelar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private ControlesUsuario.ctlTituloProductos ctlTituloProductos1;
-        private ControlesUsuario.ctlTicketProducto ctlTicketProducto3;
-        private ControlesUsuario.ctlTicketProducto ctlTicketProducto2;
-        private ControlesUsuario.ctlTicketProducto ctlTicketProducto1;
-        private ControlesUsuario.ctlTicketProducto ctlTicketProducto5;
-        private ControlesUsuario.ctlTicketProducto ctlTicketProducto4;
         private Bunifu.UI.WinForms.BunifuDropdown cboMetodoPago;
         private System.Windows.Forms.Label label1;
-        private ControlesUsuario.ctlProducto ctlProducto1;
-        private ControlesUsuario.ctlProducto ctlProducto2;
-        private ControlesUsuario.ctlProducto ctlProducto3;
-        private ControlesUsuario.ctlProducto ctlProducto4;
-        private ControlesUsuario.ctlProducto ctlProducto5;
-        private ControlesUsuario.ctlProducto ctlProducto6;
-        private ControlesUsuario.ctlProducto ctlProducto7;
-        private ControlesUsuario.ctlProducto ctlProducto8;
-        private ControlesUsuario.ctlProducto ctlProducto9;
-        private ControlesUsuario.ctlProducto ctlProducto10;
-        private ControlesUsuario.ctlProducto ctlProducto11;
-        private ControlesUsuario.ctlProducto ctlProducto12;
-        private ControlesUsuario.ctlProducto ctlProducto13;
     }
 }

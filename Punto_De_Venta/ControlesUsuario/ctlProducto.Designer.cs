@@ -143,12 +143,11 @@
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private System.Windows.Forms.Label lblStock;
-        private Bunifu.UI.WinForms.BunifuPictureBox picturePan;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblNombre;
+        public Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        public System.Windows.Forms.Label lblStock;
+        public Bunifu.UI.WinForms.BunifuPictureBox picturePan;
+        public System.Windows.Forms.Label lblPrecio;
+        public System.Windows.Forms.Label lblNombre;
     }
 }

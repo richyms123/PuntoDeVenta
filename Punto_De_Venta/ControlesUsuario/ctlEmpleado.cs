@@ -47,17 +47,15 @@ namespace Punto_De_Venta.ControlesUsuario
                 lblRol.Text= empleado.Rol == 1 ? "Administrador" : "Empleado";
                 lblTelefono.Text = empleado.Telefono;
                 if (empleado.FotoEmpleado!=null)
-                {
-                    
-                    
-                        try
-                        {
-                            pictureEmpleado.Image = ByteAImagen();
-                        }
-                        catch
-                        {
+                {           
+                    try
+                    {
+                        pictureEmpleado.Image = ByteAImagen();
+                    }
+                    catch
+                    {
                             
-                        }
+                    }
                     
                 }
                 

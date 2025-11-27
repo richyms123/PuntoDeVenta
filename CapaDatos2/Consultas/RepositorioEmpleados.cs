@@ -10,8 +10,6 @@ namespace CapaDatos.Consultas
     public class RepositorioEmpleados
     {
 
-        
-
         public List<Empleado> ObtenerTodos()
         {
             List<Empleado> lista = new List<Empleado>();

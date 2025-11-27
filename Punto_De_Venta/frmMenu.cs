@@ -22,6 +22,27 @@ namespace Punto_De_Venta
             InitializeComponent();
         }
 
+        private void EsconderSubMenu()
+        {
+            if (pnlSubmenuReportes.Visible)
+                pnlSubmenuReportes.Visible = false;
+
+            
+        }
+
+        private void MostrarSubMenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                EsconderSubMenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
         public void AbrirForm(Form ChildForm)
         {
             if (ActiveForm != null)
@@ -85,18 +106,21 @@ namespace Punto_De_Venta
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
+            EsconderSubMenu();
             ActivarBoton(btnVentas, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmVentas());
         }
 
         private void btnInvetario_Click(object sender, EventArgs e)
         {
+            EsconderSubMenu();
             ActivarBoton(btnInvetario, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmInventario());
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
+            EsconderSubMenu();
             ActivarBoton(btnEmpleados, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmEmpleados());
         }
@@ -104,24 +128,28 @@ namespace Punto_De_Venta
         private void btnReportes_Click(object sender, EventArgs e)
         {
             ActivarBoton(sender, Color.FromArgb(216, 67, 21));
-            AbrirForm(new frmReportes());
+            MostrarSubMenu(pnlSubmenuReportes);
+            
         }
 
         private void btnAuditoria_Click(object sender, EventArgs e)
         {
+            EsconderSubMenu();
             ActivarBoton(btnAuditoria, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmAuditoria());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            EsconderSubMenu();
             ActivarBoton(btnInicio, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmInicio());
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-           
+            pnlSubmenuReportes.Visible = false;
+
             if (EmpleadoGlobal.Rol != 1)
             {
                 lblRol.Text = "Empleado";
@@ -139,12 +167,6 @@ namespace Punto_De_Venta
             AbrirForm(new frmInicio());
         }
 
-        /*private byte[] ConvertirImg()
-        {
-            ImageConverter img = new ImageConverter();
-            byte[] bytes = (byte[])img.ConvertTo(new Bitmap(rde.pictureImagenUsuario.Image), typeof(byte[]));
-            return bytes;
-        }*/
 
         private Image ByteAImagen()
         {
@@ -153,6 +175,11 @@ namespace Punto_De_Venta
             bm = new Bitmap(ms);
             return bm;
 
+        }
+
+        private void btnReporteVentasRango_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmReportes());
         }
     }
 }
