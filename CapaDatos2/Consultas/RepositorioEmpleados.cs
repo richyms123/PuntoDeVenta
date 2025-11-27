@@ -9,7 +9,12 @@ namespace CapaDatos.Consultas
 {
     public class RepositorioEmpleados
     {
-
+        /// <summary>
+        /// Se encarga de hacer el inicio de sesin en la base de datos. En caso de acceder, retorna el usuario ingresado.
+        /// </summary>
+        /// <param name="usuario">Usuario existente en la base de datos.</param>
+        /// <param name="clave">Clase correspondiente al usuario en la base de datos.</param>
+        /// <returns>En caso de ingresar usuario y clave correctos, se ingresa al menú y se retorna el usuario ingresado.</returns>
         public Empleado Login(string usuario, string clave)
         {
             Empleado objEmpleado = null;
@@ -49,7 +54,11 @@ namespace CapaDatos.Consultas
             }
             return objEmpleado;
         }
-
+        /// <summary>
+        /// Agrega empleados a la tabla Empleados.
+        /// </summary>
+        /// <param name="user">Recibe el empleado que se vaya a agregar en la tabla Empleados.</param>
+        /// <returns>Retorna un entero en caso de que se haya agregado correctamente el empleado.</returns>
         public int Agregar(Empleado user)
         {
             using (MySqlConnection conexion = new Conexion().ObtenerConexion())
@@ -83,11 +92,32 @@ namespace CapaDatos.Consultas
                     return 0;
                 }
             }
-
         }
 
-       
+        /// <summary>
+        /// Se hace una eliminacion logica del empleado, cambiando su estado a inactivo.
+        /// </summary>
+        /// <param name="user">Recibe el empleado a eliminar.</param>
+        /// <returns>Retorna un entero en caso de que se haya eliminado correctamente el empleado.</returns>
+        public int Eliminar(Empleado user)
+        {
+            using (MySqlConnection conexion = new Conexion().ObtenerConexion())
+            {
+                try
+                {
+                    MySqlCommand cmd = new MySqlCommand("delete_user", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
+                    cmd.Parameters.AddWithValue("@nidEmpleado", user.idEmpleado);
+                    int result = cmd.ExecuteNonQuery();
+                    return Convert.ToInt32(result);
+                }
+                catch (Exception ex)
+                {
+                    return 0;
+                }
+            }
+        }
 
     }
 
