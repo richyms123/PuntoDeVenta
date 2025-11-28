@@ -1,14 +1,8 @@
 ﻿using CapaDatos.Objetos;
 using Punto_De_Venta.ObjetosGlobales;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Punto_De_Venta.ControlesUsuario
@@ -24,7 +18,7 @@ namespace Punto_De_Venta.ControlesUsuario
             InitializeComponent();
             bunifuPanel1.MouseEnter += Efecto_MouseEnter;
             bunifuPanel1.MouseLeave += Efecto_MouseLeave;
-            bunifuPanel1.Click += Evento_Click_General; 
+            bunifuPanel1.Click += Evento_Click_General;
 
             foreach (Control control in bunifuPanel1.Controls)
             {
@@ -43,7 +37,7 @@ namespace Punto_De_Venta.ControlesUsuario
                 lblPrecio.Text = "$ " + producto.PrecioUnitario.ToString("N2");
                 lblNombre.Text = producto.Nombre;
                 lblStock.Text = producto.Stock.ToString();
-                if(Producto.FotoProducto != null)
+                if (Producto.FotoProducto != null)
                     picturePan.Image = ByteAImagen();
             }
         }
@@ -60,7 +54,7 @@ namespace Punto_De_Venta.ControlesUsuario
         private void Efecto_MouseEnter(object sender, EventArgs e)
         {
             bunifuPanel1.BorderColor = colorConFoco;
-            bunifuPanel1.BorderThickness = 1; 
+            bunifuPanel1.BorderThickness = 1;
             this.Cursor = Cursors.Hand;
         }
 

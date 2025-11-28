@@ -1,32 +1,35 @@
 ﻿using CapaDatos.Objetos;
+using CapaDatos2.Consultas;
 using Punto_De_Venta.ControlesUsuario;
 using Punto_De_Venta.ObjetosGlobales;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Punto_De_Venta
 {
     public partial class frmVentas : Form
     {
-        
-        List<DetalleVenta> listaDetalleVenta= new List<DetalleVenta>();
+        RepositorioProductos repositorioProducto = new RepositorioProductos();
+        private RepositorioVenta venta = new RepositorioVenta();
+
+        List<DetalleVenta> listaDetalleVenta = new List<DetalleVenta>();
         public frmVentas()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Es donde se cargan los controles de productos en el panel contenedor
+        /// </summary>
+        /// <param name="listaProductos">Una lista con todos los productos</param>
         private void CargarControl(List<Producto> listaProductos)
         {
             pnlContenedor.SuspendLayout();
             pnlContenedor.Controls.Clear();
-            foreach(Producto p in listaProductos)
+            foreach (Producto p in listaProductos)
             {
                 ctlProducto control = new ctlProducto()
                 {
@@ -43,6 +46,11 @@ namespace Punto_De_Venta
             pnlContenedor.ResumeLayout();
         }
 
+        /// <summary>
+        /// Permite que al dar click en cualquier parte del control de producto se agregue al ticket de venta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Control_Evento_Click_General(object sender, EventArgs e)
         {
             pnlProductos.SuspendLayout();
@@ -78,18 +86,21 @@ namespace Punto_De_Venta
                 });
                 lblTotal.Text = listaDetalleVenta.Sum(x => x.SubTotal).ToString("$0.00");
             }
-            
+
             pnlProductos.ResumeLayout();
 
         }
 
+        /// <summary>
+        /// Se obtienen los productos de la base de datos
+        /// </summary>
         public void LlenarProductos()
         {
-            /*var productos = repositorioProducto.ObtenerTodos();
+            var productos = repositorioProducto.ObtenerTodos();
             if (productos != null)
             {
                 CargarControl(productos);
-            }*/
+            }
         }
         private void frmVentas_Load(object sender, EventArgs e)
         {
@@ -98,23 +109,46 @@ namespace Punto_De_Venta
             LlenarProductos();
         }
 
+        /// <summary>
+        /// Limpia los controles a su estado inicial
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             pnlProductos.Controls.Clear();
+            listaDetalleVenta.Clear();
+            lblTotal.Text = "$0.00";
         }
 
+        /// <summary>
+        /// Se encarga de procesar el cobro de la venta validand que haya productos en el ticket y mostrando mensajes de éxito o error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            if(listaDetalleVenta.Count == 0)
+            if (listaDetalleVenta.Count == 0)
             {
                 MessageBox.Show("No hay productos en el ticket de venta.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            foreach (var detalle in listaDetalleVenta)
+            bool resultado = venta.RealizarVenta(listaDetalleVenta, cboMetodoPago.SelectedItem.ToString(), EmpleadoSesion.idEmpleado, EmpleadoSesion.Usuario);
+            if (resultado)
             {
-                Console.WriteLine($"Producto ID: {detalle.idProducto}, Cantidad: {detalle.Cantidad}, SubTotal: {detalle.SubTotal}");
+                MessageBox.Show("Venta realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                pnlProductos.Controls.Clear();
+                listaDetalleVenta.Clear();
+                lblTotal.Text = "$0.00";
+                LlenarProductos();
+
             }
+            else
+            {
+                MessageBox.Show("Ocurrió un error al realizar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
     }
 }

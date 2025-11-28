@@ -91,12 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Consultas\RepositorioAuditorias.cs" />
+    <Compile Include="Consultas\RepositorioCategoria.cs" />
     <Compile Include="Consultas\RepositorioEmpleados.cs" />
+    <Compile Include="Consultas\RepositorioProductos.cs" />
+    <Compile Include="Consultas\RepositorioVenta.cs" />
     <Compile Include="Objetos\AuditoriaProducto.cs" />
     <Compile Include="Objetos\Categoria.cs" />
     <Compile Include="Objetos\DetalleVenta.cs" />
     <Compile Include="Objetos\Empleado.cs" />
     <Compile Include="Objetos\Producto.cs" />
+    <Compile Include="Objetos\ReporteVenta.cs" />
+    <Compile Include="Objetos\ReporteVentaComparativa.cs" />
     <Compile Include="Objetos\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

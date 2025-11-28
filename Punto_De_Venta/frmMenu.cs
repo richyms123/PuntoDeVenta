@@ -1,14 +1,8 @@
-﻿using CapaDatos.Objetos;
-using FontAwesome.Sharp.Material;
+﻿using FontAwesome.Sharp.Material;
+using Punto_De_Venta.ObjetosGlobales;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Punto_De_Venta
@@ -27,7 +21,7 @@ namespace Punto_De_Venta
             if (pnlSubmenuReportes.Visible)
                 pnlSubmenuReportes.Visible = false;
 
-            
+
         }
 
         private void MostrarSubMenu(Panel submenu)
@@ -43,6 +37,11 @@ namespace Punto_De_Venta
             }
         }
 
+
+        /// <summary>
+        /// Permite abrir un formulario hijo dentro del formulario principal
+        /// </summary>
+        /// <param name="ChildForm"></param>
         public void AbrirForm(Form ChildForm)
         {
             if (ActiveForm != null)
@@ -60,6 +59,12 @@ namespace Punto_De_Venta
             ChildForm.Show();
         }
 
+
+        /// <summary>
+        /// Activa el boton seleccionado para más interacción visual
+        /// </summary>
+        /// <param name="senderBtn"></param>
+        /// <param name="color"></param>
         private void ActivarBoton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -76,6 +81,10 @@ namespace Punto_De_Venta
             }
         }
 
+
+        /// <summary>
+        /// Desactiva el boton previamente seleccionado
+        /// </summary>
         private void DesactivarBoton()
         {
             if (botonActual != null)
@@ -129,7 +138,7 @@ namespace Punto_De_Venta
         {
             ActivarBoton(sender, Color.FromArgb(216, 67, 21));
             MostrarSubMenu(pnlSubmenuReportes);
-            
+
         }
 
         private void btnAuditoria_Click(object sender, EventArgs e)
@@ -146,11 +155,17 @@ namespace Punto_De_Venta
             AbrirForm(new frmInicio());
         }
 
+
+        /// <summary>
+        /// Es donde sucede la configuración inicial del menu, y se cargan los datos del empleado en sesión
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMenu_Load(object sender, EventArgs e)
         {
             pnlSubmenuReportes.Visible = false;
 
-            if (EmpleadoGlobal.Rol != 1)
+            if (EmpleadoSesion.Rol == 0)
             {
                 lblRol.Text = "Empleado";
                 btnAuditoria.Visible = false;
@@ -160,17 +175,23 @@ namespace Punto_De_Venta
             {
                 lblRol.Text = "Administrador";
             }
-            lblUsuario.Text = EmpleadoGlobal.Usuario;
-            if(EmpleadoGlobal.FotoEmpleado != null)
+            lblUsuario.Text = EmpleadoSesion.Usuario;
+            if (EmpleadoSesion.FotoEmpleado != null)
                 pictureUsuario.Image = ByteAImagen();
             ActivarBoton(btnInicio, Color.FromArgb(216, 67, 21));
             AbrirForm(new frmInicio());
         }
 
 
+        /// <summary>
+        /// Está función convierte el arreglo de bytes de la foto del empleado en sesión a una imagen para mostrarla en el menú
+        /// </summary>
+        /// <returns>
+        /// La imagen convertida
+        /// </returns>
         private Image ByteAImagen()
         {
-            MemoryStream ms = new MemoryStream(EmpleadoGlobal.FotoEmpleado);
+            MemoryStream ms = new MemoryStream(EmpleadoSesion.FotoEmpleado);
             Bitmap bm = null;
             bm = new Bitmap(ms);
             return bm;
@@ -180,6 +201,12 @@ namespace Punto_De_Venta
         private void btnReporteVentasRango_Click(object sender, EventArgs e)
         {
             AbrirForm(new frmReportes());
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmReporteComparativo());
+
         }
     }
 }

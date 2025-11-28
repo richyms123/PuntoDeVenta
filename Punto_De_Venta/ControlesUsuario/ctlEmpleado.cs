@@ -1,20 +1,14 @@
 ﻿using CapaDatos.Objetos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Punto_De_Venta.ControlesUsuario
 {
     public partial class ctlEmpleado : UserControl
     {
-        
+
         private Color colorSinFoco = Color.WhiteSmoke;
         private Color colorConFoco = Color.FromArgb(216, 67, 21);
         private Empleado empleado = new Empleado();
@@ -44,34 +38,34 @@ namespace Punto_De_Venta.ControlesUsuario
                 empleado = value;
                 lblNombre.Text = empleado.Nombre + " " + empleado.Apellidos;
                 lblCorreo.Text = empleado.Mail;
-                lblRol.Text= empleado.Rol == 1 ? "Administrador" : "Empleado";
+                lblRol.Text = empleado.Rol == 1 ? "Administrador" : "Empleado";
                 lblTelefono.Text = empleado.Telefono;
-                if (empleado.FotoEmpleado!=null)
-                {           
+                if (empleado.FotoEmpleado != null)
+                {
                     try
                     {
                         pictureEmpleado.Image = ByteAImagen();
                     }
                     catch
                     {
-                            
+
                     }
-                    
+
                 }
-                
+
                 if (empleado.Rol == 1)
                 {
-                    pnlContenedorRol.GradientTopLeft = Color.FromArgb(255, 215, 64);  
-                    pnlContenedorRol.GradientTopRight = Color.FromArgb(255, 215, 64); 
-                    pnlContenedorRol.GradientBottomLeft = Color.FromArgb(255, 160, 0); 
-                    pnlContenedorRol.GradientBottomRight = Color.FromArgb(255, 160, 0); 
+                    pnlContenedorRol.GradientTopLeft = Color.FromArgb(255, 215, 64);
+                    pnlContenedorRol.GradientTopRight = Color.FromArgb(255, 215, 64);
+                    pnlContenedorRol.GradientBottomLeft = Color.FromArgb(255, 160, 0);
+                    pnlContenedorRol.GradientBottomRight = Color.FromArgb(255, 160, 0);
                 }
                 else
                 {
-                    pnlContenedorRol.GradientTopLeft = Color.FromArgb(41, 128, 185);    
-                    pnlContenedorRol.GradientTopRight = Color.FromArgb(41, 128, 185);  
-                    pnlContenedorRol.GradientBottomLeft = Color.FromArgb(31, 97, 141);  
-                    pnlContenedorRol.GradientBottomRight = Color.FromArgb(31, 97, 141); 
+                    pnlContenedorRol.GradientTopLeft = Color.FromArgb(41, 128, 185);
+                    pnlContenedorRol.GradientTopRight = Color.FromArgb(41, 128, 185);
+                    pnlContenedorRol.GradientBottomLeft = Color.FromArgb(31, 97, 141);
+                    pnlContenedorRol.GradientBottomRight = Color.FromArgb(31, 97, 141);
                 }
 
             }

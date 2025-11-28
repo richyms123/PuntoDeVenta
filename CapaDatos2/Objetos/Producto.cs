@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CapaDatos.Objetos
+﻿namespace CapaDatos.Objetos
 {
     public class Producto
     {
@@ -15,6 +11,9 @@ namespace CapaDatos.Objetos
         public bool Descontinuado { get; set; }
         public byte[] FotoProducto { get; set; }
         public int idCategoria { get; set; }
+
+        //Para la ventana de inicio
+        public int productosActivos { get; set; }
 
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CapaDatos.Objetos
+﻿namespace CapaDatos.Objetos
 {
     public class Categoria
     {

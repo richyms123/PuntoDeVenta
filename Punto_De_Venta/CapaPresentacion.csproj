@@ -279,6 +279,12 @@
     <Compile Include="frmReEdEmpleados.Designer.cs">
       <DependentUpon>frmReEdEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteComparativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteComparativo.Designer.cs">
+      <DependentUpon>frmReporteComparativo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportesPorRango.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,7 @@
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="ObjetosGlobales\EmpleadoGlobal.cs" />
+    <Compile Include="ObjetosGlobales\EmpleadoSesion.cs" />
     <Compile Include="ObjetosGlobales\ProductoGlobal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -348,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReEdEmpleados.resx">
       <DependentUpon>frmReEdEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteComparativo.resx">
+      <DependentUpon>frmReporteComparativo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportesPorRango.resx">
       <DependentUpon>frmReportesPorRango.cs</DependentUpon>

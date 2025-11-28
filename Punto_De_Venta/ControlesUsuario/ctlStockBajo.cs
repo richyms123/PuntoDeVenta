@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Punto_De_Venta.ControlesUsuario
 {
@@ -15,6 +7,17 @@ namespace Punto_De_Venta.ControlesUsuario
         public ctlStockBajo()
         {
             InitializeComponent();
+        }
+        public string NombreProducto
+        {
+            get { return lblNombre.Text; }
+            set { lblNombre.Text = value; }
+        }
+
+        public string Stock
+        {
+            get { return lblCantidad.Text; }
+            set { lblCantidad.Text = value; }
         }
     }
 }

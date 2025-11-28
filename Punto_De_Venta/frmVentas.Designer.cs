@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlProductos = new System.Windows.Forms.Panel();
@@ -47,9 +43,6 @@
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblIdVenta = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.cboCategoria = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlContenedor = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -57,7 +50,6 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
-            this.bunifuPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -291,138 +283,6 @@
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Ticket de Venta";
             // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 20;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.cboCategoria);
-            this.bunifuPanel2.Controls.Add(this.txtBuscar);
-            this.bunifuPanel2.Location = new System.Drawing.Point(12, 10);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(743, 100);
-            this.bunifuPanel2.TabIndex = 315;
-            // 
-            // cboCategoria
-            // 
-            this.cboCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.cboCategoria.BackgroundColor = System.Drawing.Color.White;
-            this.cboCategoria.BorderColor = System.Drawing.Color.Silver;
-            this.cboCategoria.BorderRadius = 10;
-            this.cboCategoria.Color = System.Drawing.Color.Silver;
-            this.cboCategoria.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cboCategoria.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboCategoria.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cboCategoria.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboCategoria.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cboCategoria.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cboCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboCategoria.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategoria.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cboCategoria.FillDropDown = true;
-            this.cboCategoria.FillIndicator = false;
-            this.cboCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboCategoria.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cboCategoria.ForeColor = System.Drawing.Color.Black;
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Icon = null;
-            this.cboCategoria.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cboCategoria.IndicatorColor = System.Drawing.Color.Gray;
-            this.cboCategoria.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cboCategoria.ItemBackColor = System.Drawing.Color.White;
-            this.cboCategoria.ItemBorderColor = System.Drawing.Color.White;
-            this.cboCategoria.ItemForeColor = System.Drawing.Color.Black;
-            this.cboCategoria.ItemHeight = 37;
-            this.cboCategoria.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cboCategoria.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cboCategoria.ItemTopMargin = 3;
-            this.cboCategoria.Location = new System.Drawing.Point(522, 29);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(214, 43);
-            this.cboCategoria.TabIndex = 5;
-            this.cboCategoria.Text = null;
-            this.cboCategoria.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cboCategoria.TextLeftMargin = 5;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.AcceptsReturn = false;
-            this.txtBuscar.AcceptsTab = false;
-            this.txtBuscar.AnimationSpeed = 200;
-            this.txtBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.txtBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscar.BackgroundImage")));
-            this.txtBuscar.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
-            this.txtBuscar.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBuscar.BorderColorHover = System.Drawing.Color.Silver;
-            this.txtBuscar.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtBuscar.BorderRadius = 20;
-            this.txtBuscar.BorderThickness = 1;
-            this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.DefaultFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.FillColor = System.Drawing.Color.White;
-            this.txtBuscar.HideSelection = true;
-            this.txtBuscar.IconLeft = null;
-            this.txtBuscar.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.IconPadding = 10;
-            this.txtBuscar.IconRight = null;
-            this.txtBuscar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Lines = new string[0];
-            this.txtBuscar.Location = new System.Drawing.Point(15, 29);
-            this.txtBuscar.MaxLength = 32767;
-            this.txtBuscar.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtBuscar.Modified = false;
-            this.txtBuscar.Multiline = false;
-            this.txtBuscar.Name = "txtBuscar";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscar.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscar.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.Silver;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscar.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscar.OnIdleState = stateProperties4;
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(3);
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscar.PlaceholderText = "Buscar producto";
-            this.txtBuscar.ReadOnly = false;
-            this.txtBuscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.SelectionLength = 0;
-            this.txtBuscar.SelectionStart = 0;
-            this.txtBuscar.ShortcutsEnabled = true;
-            this.txtBuscar.Size = new System.Drawing.Size(499, 43);
-            this.txtBuscar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtBuscar.TabIndex = 4;
-            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscar.TextMarginBottom = 0;
-            this.txtBuscar.TextMarginLeft = 3;
-            this.txtBuscar.TextMarginTop = 0;
-            this.txtBuscar.TextPlaceholder = "Buscar producto";
-            this.txtBuscar.UseSystemPasswordChar = false;
-            this.txtBuscar.WordWrap = true;
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 20;
@@ -432,9 +292,9 @@
             // 
             this.pnlContenedor.AutoScroll = true;
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Location = new System.Drawing.Point(12, 119);
+            this.pnlContenedor.Location = new System.Drawing.Point(12, 26);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(743, 540);
+            this.pnlContenedor.Size = new System.Drawing.Size(743, 633);
             this.pnlContenedor.TabIndex = 316;
             // 
             // bunifuElipse2
@@ -449,7 +309,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1168, 712);
             this.Controls.Add(this.pnlContenedor);
-            this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentas";
@@ -463,7 +322,6 @@
             this.bunifuPanel4.PerformLayout();
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel3.PerformLayout();
-            this.bunifuPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -478,9 +336,6 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotal;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuDropdown cboCategoria;
-        private Bunifu.UI.WinForms.BunifuTextBox txtBuscar;
         private FontAwesome.Sharp.Material.MaterialButton btnCobrar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.FlowLayoutPanel pnlContenedor;

@@ -36,6 +36,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnEditar = new FontAwesome.Sharp.Material.MaterialButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -147,6 +148,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(919, 3);
@@ -154,18 +156,33 @@
             this.panel1.Size = new System.Drawing.Size(158, 44);
             this.panel1.TabIndex = 13;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.MaterialIcons.TrashCan;
+            this.btnEliminar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
+            this.btnEliminar.IconSize = 32;
+            this.btnEliminar.Location = new System.Drawing.Point(89, 9);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(27, 27);
+            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnTrash_Click);
+            // 
             // btnEditar
             // 
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.IconChar = FontAwesome.Sharp.MaterialIcons.PencilBox;
-            this.btnEditar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
+            this.btnEditar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(145)))));
             this.btnEditar.IconSize = 32;
-            this.btnEditar.Location = new System.Drawing.Point(71, 9);
+            this.btnEditar.Location = new System.Drawing.Point(56, 9);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(27, 27);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // ctlProductoInventario
             // 
@@ -192,5 +209,6 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Panel panel1;
         public FontAwesome.Sharp.Material.MaterialButton btnEditar;
+        public FontAwesome.Sharp.Material.MaterialButton btnEliminar;
     }
 }

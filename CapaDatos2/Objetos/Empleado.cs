@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CapaDatos.Objetos
 {
@@ -23,7 +21,7 @@ namespace CapaDatos.Objetos
         public string Mail { get; set; }
         public byte[] FotoEmpleado { get; set; }
         public DateTime FechaDeAlta { get; set; }
-        public DateTime FehaNacimiento {  get; set; }
+        public DateTime FehaNacimiento { get; set; }
 
 
 
