@@ -40,6 +40,13 @@ namespace Punto_De_Venta
             CargarProductos();
         }
 
+
+        /// <summary>
+        /// Se configura la gráfica comparativa de ventas entre dos meses
+        /// </summary>
+        /// <param name="lista"> Lista de los id de cada producto seleccionado</param>
+        /// <param name="nombreMes1"> Nombre del mes 1</param>
+        /// <param name="nombreMes2">Nombre del mes 2</param>
         private void ConfigurarGraficaComparativa(List<ReporteVentaComparativa> lista, string nombreMes1, string nombreMes2)
         {
             chartReporteComparativo.Series.Clear();
@@ -114,6 +121,11 @@ namespace Punto_De_Venta
             chartReporteComparativo.Series.Add(sMes2);
         }
 
+        /// <summary>
+        /// Genera el reporte comparativo entre dos meses seleccionados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             if(cboMes1.SelectedIndex==cboMes2.SelectedIndex)
