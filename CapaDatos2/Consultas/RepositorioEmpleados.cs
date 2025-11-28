@@ -3,7 +3,6 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Text;
 
 namespace CapaDatos.Consultas
 {
@@ -106,7 +105,7 @@ namespace CapaDatos.Consultas
             }
             return objEmpleado;
         }
-      
+
         /// Se edita el Empleado.
         /// </summary>
         /// <param name="user">Recibe el empleado a editar.</param>
@@ -192,9 +191,9 @@ namespace CapaDatos.Consultas
         /// <summary>
         /// Se hace una eliminacion logica del empleado, cambiando su estado a inactivo.
         /// </summary>
-        /// <param name="user">Recibe el empleado a eliminar.</param>
+        /// <param name="idEmpleado">Recibe el id del emepleado a eliminar.</param>
         /// <returns>Retorna un entero en caso de que se haya eliminado correctamente el empleado.</returns>
-        public int Eliminar(Empleado user)
+        public int Eliminar(int idEmpleado)
         {
             using (MySqlConnection conexion = new Conexion().ObtenerConexion())
             {
@@ -203,7 +202,7 @@ namespace CapaDatos.Consultas
                     MySqlCommand cmd = new MySqlCommand("delete_user", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@nidEmpleado", user.idEmpleado);
+                    cmd.Parameters.AddWithValue("@nidEmpleado", idEmpleado);
                     int result = cmd.ExecuteNonQuery();
                     return Convert.ToInt32(result);
                 }

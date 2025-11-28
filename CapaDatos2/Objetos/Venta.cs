@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CapaDatos.Objetos
 {
@@ -15,6 +13,9 @@ namespace CapaDatos.Objetos
         //DECIMAL
         public float Total { get; set; }
         public int idEmpleado { get; set; }
+
+        //Para la ventana de inicio
+        public float TotalVentasHoy { get; set; }
 
     }
 }

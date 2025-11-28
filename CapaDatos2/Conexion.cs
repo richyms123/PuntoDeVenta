@@ -1,16 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Text;
 
 namespace CapaDatos
 {
-    public  class Conexion
+    public class Conexion
     {
         public static string cadena = ConfigurationManager.ConnectionStrings["cadena_conexion"].ToString();
 
-        
+
         public MySqlConnection ObtenerConexion()
         {
             MySqlConnection conexion = new MySqlConnection(cadena);
@@ -30,7 +28,7 @@ namespace CapaDatos
             return conexion;
         }
 
-       
+
         public void CerrarConexion(MySqlConnection conexion)
         {
             if (conexion != null && conexion.State == System.Data.ConnectionState.Open)

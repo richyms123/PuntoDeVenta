@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -52,11 +49,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.ctlTituloProductoInventario1 = new Punto_De_Venta.ControlesUsuario.ctlTituloProductoInventario();
             this.panel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.pictureProducto = new FontAwesome.Sharp.Material.MaterialPictureBox();
+            this.pictureProducto = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.btnLimpiar = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnGuardar = new FontAwesome.Sharp.Material.MaterialButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tglDescontinuado = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.txtCantidad = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtPrecio = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cboCategoria = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -67,14 +64,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ctlProductoInventario7 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlProductoInventario6 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlProductoInventario5 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlProductoInventario4 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlProductoInventario3 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlProductoInventario2 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlProductoInventario1 = new Punto_De_Venta.ControlesUsuario.ctlProductoInventario();
-            this.ctlTituloProductoInventario1 = new Punto_De_Venta.ControlesUsuario.ctlTituloProductoInventario();
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
@@ -118,18 +108,20 @@
             // 
             this.pnlContenedor.AutoSize = true;
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario7);
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario6);
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario5);
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario4);
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario3);
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario2);
-            this.pnlContenedor.Controls.Add(this.ctlProductoInventario1);
             this.pnlContenedor.Controls.Add(this.ctlTituloProductoInventario1);
             this.pnlContenedor.Location = new System.Drawing.Point(18, 323);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1055, 400);
             this.pnlContenedor.TabIndex = 10;
+            // 
+            // ctlTituloProductoInventario1
+            // 
+            this.ctlTituloProductoInventario1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
+            this.ctlTituloProductoInventario1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ctlTituloProductoInventario1.Location = new System.Drawing.Point(0, 0);
+            this.ctlTituloProductoInventario1.Name = "ctlTituloProductoInventario1";
+            this.ctlTituloProductoInventario1.Size = new System.Drawing.Size(1055, 50);
+            this.ctlTituloProductoInventario1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -138,9 +130,8 @@
             this.panel2.BorderRadius = 20;
             this.panel2.BorderThickness = 1;
             this.panel2.Controls.Add(this.pictureProducto);
+            this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.btnGuardar);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.tglDescontinuado);
             this.panel2.Controls.Add(this.txtCantidad);
             this.panel2.Controls.Add(this.txtPrecio);
             this.panel2.Controls.Add(this.cboCategoria);
@@ -164,18 +155,40 @@
             // 
             // pictureProducto
             // 
-            this.pictureProducto.BackColor = System.Drawing.Color.White;
-            this.pictureProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
-            this.pictureProducto.IconChar = FontAwesome.Sharp.MaterialIcons.Image;
-            this.pictureProducto.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
-            this.pictureProducto.IconSize = 152;
-            this.pictureProducto.Location = new System.Drawing.Point(20, 50);
+            this.pictureProducto.AllowFocused = false;
+            this.pictureProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureProducto.AutoSizeHeight = true;
+            this.pictureProducto.BorderRadius = 0;
+            this.pictureProducto.Image = global::Punto_De_Venta.Properties.Resources.iconoImagen;
+            this.pictureProducto.IsCircle = true;
+            this.pictureProducto.Location = new System.Drawing.Point(20, 51);
             this.pictureProducto.Name = "pictureProducto";
             this.pictureProducto.Size = new System.Drawing.Size(152, 152);
             this.pictureProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureProducto.TabIndex = 304;
+            this.pictureProducto.TabIndex = 306;
             this.pictureProducto.TabStop = false;
+            this.pictureProducto.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             this.pictureProducto.DoubleClick += new System.EventHandler(this.pictureProduct_DoubleClick);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(56)))), ((int)(((byte)(202)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.MaterialIcons.Broom;
+            this.btnLimpiar.IconColor = System.Drawing.Color.White;
+            this.btnLimpiar.IconSize = 40;
+            this.btnLimpiar.Location = new System.Drawing.Point(859, 176);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(148, 43);
+            this.btnLimpiar.TabIndex = 305;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -187,7 +200,7 @@
             this.btnGuardar.IconChar = FontAwesome.Sharp.MaterialIcons.Floppy;
             this.btnGuardar.IconColor = System.Drawing.Color.White;
             this.btnGuardar.IconSize = 40;
-            this.btnGuardar.Location = new System.Drawing.Point(859, 176);
+            this.btnGuardar.Location = new System.Drawing.Point(684, 176);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(148, 43);
             this.btnGuardar.TabIndex = 301;
@@ -196,62 +209,6 @@
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.label2.Location = new System.Drawing.Point(830, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 23);
-            this.label2.TabIndex = 300;
-            this.label2.Text = "Descontinuado";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tglDescontinuado
-            // 
-            this.tglDescontinuado.Animation = 5;
-            this.tglDescontinuado.BackColor = System.Drawing.Color.Transparent;
-            this.tglDescontinuado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tglDescontinuado.BackgroundImage")));
-            this.tglDescontinuado.Checked = false;
-            this.tglDescontinuado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tglDescontinuado.InnerCirclePadding = 3;
-            this.tglDescontinuado.Location = new System.Drawing.Point(963, 125);
-            this.tglDescontinuado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tglDescontinuado.Name = "tglDescontinuado";
-            this.tglDescontinuado.Size = new System.Drawing.Size(44, 29);
-            this.tglDescontinuado.TabIndex = 299;
-            this.tglDescontinuado.ThumbMargin = 3;
-            toggleState1.BackColor = System.Drawing.Color.DarkGray;
-            toggleState1.BackColorInner = System.Drawing.Color.White;
-            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState1.BorderColorInner = System.Drawing.Color.White;
-            toggleState1.BorderRadius = 17;
-            toggleState1.BorderRadiusInner = 11;
-            toggleState1.BorderThickness = 1;
-            toggleState1.BorderThicknessInner = 1;
-            this.tglDescontinuado.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.DimGray;
-            toggleState2.BackColorInner = System.Drawing.Color.White;
-            toggleState2.BorderColor = System.Drawing.Color.Silver;
-            toggleState2.BorderColorInner = System.Drawing.Color.White;
-            toggleState2.BorderRadius = 17;
-            toggleState2.BorderRadiusInner = 11;
-            toggleState2.BorderThickness = 1;
-            toggleState2.BorderThicknessInner = 1;
-            this.tglDescontinuado.ToggleStateOff = toggleState2;
-            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
-            toggleState3.BackColorInner = System.Drawing.Color.White;
-            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(67)))), ((int)(((byte)(21)))));
-            toggleState3.BorderColorInner = System.Drawing.Color.White;
-            toggleState3.BorderRadius = 17;
-            toggleState3.BorderRadiusInner = 11;
-            toggleState3.BorderThickness = 1;
-            toggleState3.BorderThicknessInner = 1;
-            this.tglDescontinuado.ToggleStateOn = toggleState3;
-            this.tglDescontinuado.Value = false;
             // 
             // txtCantidad
             // 
@@ -641,77 +598,10 @@
             this.bunifuElipse2.ElipseRadius = 15;
             this.bunifuElipse2.TargetControl = this.btnGuardar;
             // 
-            // ctlProductoInventario7
+            // bunifuElipse3
             // 
-            this.ctlProductoInventario7.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario7.Location = new System.Drawing.Point(0, 350);
-            this.ctlProductoInventario7.Name = "ctlProductoInventario7";
-            this.ctlProductoInventario7.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario7.TabIndex = 7;
-            // 
-            // ctlProductoInventario6
-            // 
-            this.ctlProductoInventario6.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario6.Location = new System.Drawing.Point(0, 300);
-            this.ctlProductoInventario6.Name = "ctlProductoInventario6";
-            this.ctlProductoInventario6.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario6.TabIndex = 6;
-            // 
-            // ctlProductoInventario5
-            // 
-            this.ctlProductoInventario5.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario5.Location = new System.Drawing.Point(0, 250);
-            this.ctlProductoInventario5.Name = "ctlProductoInventario5";
-            this.ctlProductoInventario5.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario5.TabIndex = 5;
-            // 
-            // ctlProductoInventario4
-            // 
-            this.ctlProductoInventario4.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario4.Location = new System.Drawing.Point(0, 200);
-            this.ctlProductoInventario4.Name = "ctlProductoInventario4";
-            this.ctlProductoInventario4.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario4.TabIndex = 4;
-            // 
-            // ctlProductoInventario3
-            // 
-            this.ctlProductoInventario3.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario3.Location = new System.Drawing.Point(0, 150);
-            this.ctlProductoInventario3.Name = "ctlProductoInventario3";
-            this.ctlProductoInventario3.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario3.TabIndex = 3;
-            // 
-            // ctlProductoInventario2
-            // 
-            this.ctlProductoInventario2.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario2.Location = new System.Drawing.Point(0, 100);
-            this.ctlProductoInventario2.Name = "ctlProductoInventario2";
-            this.ctlProductoInventario2.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario2.TabIndex = 2;
-            // 
-            // ctlProductoInventario1
-            // 
-            this.ctlProductoInventario1.BackColor = System.Drawing.Color.White;
-            this.ctlProductoInventario1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlProductoInventario1.Location = new System.Drawing.Point(0, 50);
-            this.ctlProductoInventario1.Name = "ctlProductoInventario1";
-            this.ctlProductoInventario1.Size = new System.Drawing.Size(1055, 50);
-            this.ctlProductoInventario1.TabIndex = 1;
-            // 
-            // ctlTituloProductoInventario1
-            // 
-            this.ctlTituloProductoInventario1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
-            this.ctlTituloProductoInventario1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ctlTituloProductoInventario1.Location = new System.Drawing.Point(0, 0);
-            this.ctlTituloProductoInventario1.Name = "ctlTituloProductoInventario1";
-            this.ctlTituloProductoInventario1.Size = new System.Drawing.Size(1055, 50);
-            this.ctlTituloProductoInventario1.TabIndex = 0;
+            this.bunifuElipse3.ElipseRadius = 15;
+            this.bunifuElipse3.TargetControl = this.btnLimpiar;
             // 
             // frmInventario
             // 
@@ -723,6 +613,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventario";
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
@@ -745,10 +636,7 @@
         private System.Windows.Forms.Panel pnlContenedor;
         private ControlesUsuario.ctlTituloProductoInventario ctlTituloProductoInventario1;
         private Bunifu.UI.WinForms.BunifuShadowPanel panel2;
-        private FontAwesome.Sharp.Material.MaterialPictureBox pictureProducto;
         private FontAwesome.Sharp.Material.MaterialButton btnGuardar;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuToggleSwitch tglDescontinuado;
         private Bunifu.UI.WinForms.BunifuTextBox txtCantidad;
         private Bunifu.UI.WinForms.BunifuTextBox txtPrecio;
         private Bunifu.UI.WinForms.BunifuDropdown cboCategoria;
@@ -757,12 +645,8 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.Material.MaterialPictureBox materialPictureBox2;
         private System.Windows.Forms.Label lblUsuario;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario7;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario6;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario5;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario4;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario3;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario2;
-        private ControlesUsuario.ctlProductoInventario ctlProductoInventario1;
+        private FontAwesome.Sharp.Material.MaterialButton btnLimpiar;
+        private Bunifu.UI.WinForms.BunifuPictureBox pictureProducto;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }

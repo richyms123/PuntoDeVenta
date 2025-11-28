@@ -1,16 +1,9 @@
 ﻿using CapaDatos.Consultas;
 using CapaDatos.Objetos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Punto_De_Venta
@@ -19,12 +12,17 @@ namespace Punto_De_Venta
     {
         private OpenFileDialog abrir;
         public bool esModEdicion { get; set; } = false;
-        private RepositorioEmpleados repositorio=new RepositorioEmpleados();
+        private RepositorioEmpleados repositorio = new RepositorioEmpleados();
         public frmReEdEmpleados()
         {
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Se utiliza para validar los campos del formulario antes de guardar
+        /// </summary>
+        /// <returns></returns>
         private bool ValidarCampos()
         {
 
@@ -53,7 +51,7 @@ namespace Punto_De_Venta
             }
 
 
-            if (string.IsNullOrWhiteSpace(txtCalle.Text)) 
+            if (string.IsNullOrWhiteSpace(txtCalle.Text))
             {
                 MessageBox.Show("La 'Calle y número' son obligatorios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCalle.Focus();
@@ -90,10 +88,10 @@ namespace Punto_De_Venta
             }
 
 
-            if (cboTurno.SelectedIndex == -1 || cboTurno.SelectedIndex==0)
+            if (cboTurno.SelectedIndex == -1 || cboTurno.SelectedIndex == 0)
             {
                 MessageBox.Show("Debes seleccionar un Turno.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cboTurno.DroppedDown = true; 
+                cboTurno.DroppedDown = true;
                 return false;
             }
 
@@ -126,6 +124,11 @@ namespace Punto_De_Venta
             this.Close();
         }
 
+        /// <summary>
+        /// Se identifica si se va a registrar un nuevo empleado o se va a editar uno existente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmReEdEmpleados_Load(object sender, EventArgs e)
         {
             cboTurno.SelectedIndex = 0;
@@ -134,8 +137,7 @@ namespace Punto_De_Venta
             {
                 txtNombre.Text = EmpleadoGlobal.Nombre;
                 txtApellidos.Text = EmpleadoGlobal.Apellidos;
-                txtUsuario.Text= EmpleadoGlobal.Usuario;
-                txtContrasena.Text = EmpleadoGlobal.Pasword;
+                txtUsuario.Text = EmpleadoGlobal.Usuario;
                 cboRol.SelectedIndex = EmpleadoGlobal.Rol;
                 if (EmpleadoGlobal.Turno == "Matutino")
                     cboTurno.SelectedIndex = 1;
@@ -148,14 +150,18 @@ namespace Punto_De_Venta
                 txtEstado.Text = EmpleadoGlobal.Estado;
                 txtCp.Text = EmpleadoGlobal.CodigoPostal;
                 txtCorreo.Text = EmpleadoGlobal.Mail;
-                if(ByteAImagen()!=null)
+                if (ByteAImagen() != null)
                     pictureEmpleado.Image = ByteAImagen();
-                
-                dtpFechaNacimiento.Value=EmpleadoGlobal.FechaNacimiento;
+
+                dtpFechaNacimiento.Value = EmpleadoGlobal.FechaNacimiento;
             }
 
         }
 
+        /// <summary>
+        /// Convierte el arreglo de bytes de la foto del empleado a una imagen
+        /// </summary>
+        /// <returns>La imagen convertida a imagen</returns>
         private Image ByteAImagen()
         {
             try
@@ -173,6 +179,11 @@ namespace Punto_De_Venta
 
         }
 
+        /// <summary>
+        /// Aqui se guardan los datos del empleado, ya sea en modo edicion o en modo agregar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos()) return;
@@ -187,7 +198,7 @@ namespace Punto_De_Venta
                     Apellidos = txtApellidos.Text.Trim(),
                     Usuario = txtUsuario.Text.Trim(),
                     Pasword = txtContrasena.Text.Trim(),
-                    Rol = cboRol.SelectedIndex + 1,
+                    Rol = cboRol.SelectedIndex,
                     Turno = cboTurno.SelectedItem.ToString(),
                     Direccion = txtCalle.Text.Trim(),
                     Municipio = txtMunicipio.Text.Trim(),
@@ -254,7 +265,7 @@ namespace Punto_De_Venta
             {
                 using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
                 {
-                    pictureEmpleado.Image.Save(ms,System.Drawing.Imaging.ImageFormat.Jpeg);
+                    pictureEmpleado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     return ms.ToArray();
                 }
             }

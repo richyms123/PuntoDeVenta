@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CapaDatos.Objetos
 {
@@ -16,5 +14,7 @@ namespace CapaDatos.Objetos
         // DECIMAL
         public float ValorNuevo { get; set; }
         public int idProducto { get; set; }
+
+        public string NombreProducto { get; set; }
     }
 }

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Punto_De_Venta.ControlesUsuario
 {
@@ -16,5 +8,21 @@ namespace Punto_De_Venta.ControlesUsuario
         {
             InitializeComponent();
         }
+        public string NombreProducto
+        {
+            get { return lblNombre.Text; }
+            set { lblNombre.Text = value; }
+        }
+        public int Cantidad
+        {
+            get { return int.Parse(lblCantidad.Text); }
+            set { lblCantidad.Text = value.ToString(); }
+        }
+        public string SubTotal
+        {
+            get { return lblSubTotal.Text; }
+            set { lblSubTotal.Text = value; }
+        }
+        public int IdProducto { get; set; }
     }
 }

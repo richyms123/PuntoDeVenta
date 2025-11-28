@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.btnAuditoria = new FontAwesome.Sharp.Material.MaterialButton();
+            this.pnlSubmenuReportes = new System.Windows.Forms.Panel();
+            this.materialButton1 = new FontAwesome.Sharp.Material.MaterialButton();
+            this.btnReporteVentasRango = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnReportes = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnSalir = new FontAwesome.Sharp.Material.MaterialButton();
             this.btnEmpleados = new FontAwesome.Sharp.Material.MaterialButton();
@@ -46,6 +49,7 @@
             this.btnCerrar = new FontAwesome.Sharp.Material.MaterialButton();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlMenuLateral.SuspendLayout();
+            this.pnlSubmenuReportes.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,6 +59,7 @@
             // 
             this.pnlMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(35)))));
             this.pnlMenuLateral.Controls.Add(this.btnAuditoria);
+            this.pnlMenuLateral.Controls.Add(this.pnlSubmenuReportes);
             this.pnlMenuLateral.Controls.Add(this.btnReportes);
             this.pnlMenuLateral.Controls.Add(this.btnSalir);
             this.pnlMenuLateral.Controls.Add(this.btnEmpleados);
@@ -79,17 +84,73 @@
             this.btnAuditoria.IconColor = System.Drawing.Color.White;
             this.btnAuditoria.IconSize = 50;
             this.btnAuditoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAuditoria.Location = new System.Drawing.Point(0, 395);
+            this.btnAuditoria.Location = new System.Drawing.Point(0, 495);
             this.btnAuditoria.Name = "btnAuditoria";
             this.btnAuditoria.Padding = new System.Windows.Forms.Padding(0, 5, 0, 15);
             this.btnAuditoria.Size = new System.Drawing.Size(260, 60);
-            this.btnAuditoria.TabIndex = 22;
+            this.btnAuditoria.TabIndex = 24;
             this.btnAuditoria.Tag = "Inicio";
             this.btnAuditoria.Text = "Auditoría";
             this.btnAuditoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAuditoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAuditoria.UseVisualStyleBackColor = true;
             this.btnAuditoria.Click += new System.EventHandler(this.btnAuditoria_Click);
+            // 
+            // pnlSubmenuReportes
+            // 
+            this.pnlSubmenuReportes.Controls.Add(this.materialButton1);
+            this.pnlSubmenuReportes.Controls.Add(this.btnReporteVentasRango);
+            this.pnlSubmenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubmenuReportes.Location = new System.Drawing.Point(0, 395);
+            this.pnlSubmenuReportes.Name = "pnlSubmenuReportes";
+            this.pnlSubmenuReportes.Size = new System.Drawing.Size(260, 100);
+            this.pnlSubmenuReportes.TabIndex = 22;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialButton1.FlatAppearance.BorderSize = 0;
+            this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton1.ForeColor = System.Drawing.Color.White;
+            this.materialButton1.IconChar = FontAwesome.Sharp.MaterialIcons.None;
+            this.materialButton1.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.materialButton1.IconSize = 44;
+            this.materialButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialButton1.Location = new System.Drawing.Point(0, 50);
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.materialButton1.Size = new System.Drawing.Size(260, 50);
+            this.materialButton1.TabIndex = 18;
+            this.materialButton1.Tag = "USUARIOS_LEER";
+            this.materialButton1.Text = "Comparativo mensual";
+            this.materialButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.materialButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // btnReporteVentasRango
+            // 
+            this.btnReporteVentasRango.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporteVentasRango.FlatAppearance.BorderSize = 0;
+            this.btnReporteVentasRango.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteVentasRango.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteVentasRango.ForeColor = System.Drawing.Color.White;
+            this.btnReporteVentasRango.IconChar = FontAwesome.Sharp.MaterialIcons.None;
+            this.btnReporteVentasRango.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReporteVentasRango.IconSize = 44;
+            this.btnReporteVentasRango.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteVentasRango.Location = new System.Drawing.Point(0, 0);
+            this.btnReporteVentasRango.Name = "btnReporteVentasRango";
+            this.btnReporteVentasRango.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.btnReporteVentasRango.Size = new System.Drawing.Size(260, 50);
+            this.btnReporteVentasRango.TabIndex = 17;
+            this.btnReporteVentasRango.Tag = "USUARIOS_LEER";
+            this.btnReporteVentasRango.Text = "Ventas por rango";
+            this.btnReporteVentasRango.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporteVentasRango.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReporteVentasRango.UseVisualStyleBackColor = true;
+            this.btnReporteVentasRango.Click += new System.EventHandler(this.btnReporteVentasRango_Click);
             // 
             // btnReportes
             // 
@@ -341,6 +402,7 @@
             this.Text = "frmMenu";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlMenuLateral.ResumeLayout(false);
+            this.pnlSubmenuReportes.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).EndInit();
@@ -364,7 +426,10 @@
         private FontAwesome.Sharp.Material.MaterialButton btnSalir;
         private FontAwesome.Sharp.Material.MaterialButton btnMinimizar;
         private FontAwesome.Sharp.Material.MaterialButton btnCerrar;
-        private FontAwesome.Sharp.Material.MaterialButton btnAuditoria;
         private FontAwesome.Sharp.Material.MaterialButton btnReportes;
+        private FontAwesome.Sharp.Material.MaterialButton btnAuditoria;
+        private System.Windows.Forms.Panel pnlSubmenuReportes;
+        private FontAwesome.Sharp.Material.MaterialButton materialButton1;
+        private FontAwesome.Sharp.Material.MaterialButton btnReporteVentasRango;
     }
 }

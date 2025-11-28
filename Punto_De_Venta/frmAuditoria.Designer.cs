@@ -45,7 +45,6 @@
             this.ctlAuditoria8 = new Punto_De_Venta.ControlesUsuario.ctlAuditoria();
             this.panel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,15 +81,6 @@
             // 
             this.pnlContenedor.AutoSize = true;
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria8);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria7);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria6);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria5);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria4);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria3);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria2);
-            this.pnlContenedor.Controls.Add(this.ctlAuditoria1);
-            this.pnlContenedor.Controls.Add(this.ctlTituloAuditoria1);
             this.pnlContenedor.Location = new System.Drawing.Point(18, 98);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1055, 550);
@@ -203,11 +193,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAuditoria";
             this.Text = "frmAuditoria";
+            this.Load += new System.EventHandler(this.frmAuditoria_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            this.pnlContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.materialPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
